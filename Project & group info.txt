@@ -1,0 +1,8 @@
+Hey there !!
+This is Unit-2's construct weeks project:- Making a clone of site "www.shop.com".
+The details of our team are: -
+1. Kanchan Gaikwad - fw18_0437 - kanchan.gaikwad0230@gmail.com
+2. Vicky Anand - fw17_0855 - vickyanandtoprock@gmail.com
+3. Vikram Chaurasia - fw19_0976 - chaurasiavikram23@gmail.com
+4. Surya Kumar Srivastava - fw19_0963 - suryasrivastava724@gmail.com
+5. Kartikey Mishra - fw19_0813 - kartikmishra686@gmail.com 

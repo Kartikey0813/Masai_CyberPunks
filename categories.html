@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(253, 253, 253);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  place-items: right;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color:skyblue;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(255, 250, 250);
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: rgb(142, 191, 203);
+  color: rgb(5, 10, 8);
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+   
+    <span id="content"> <img src="https://img.shop.com/Image/resources/logos/shop-s-logo-icon.svg" width="40" 
+    height="50" title.text="SHOP.com"><p>Shop.com</p>
+    </span>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  
+  <br>
+  <h3>Categories</h3>
+  <a href="#">All Department</a>
+  <a href="#">Men</a>
+  <a href="#">Women</a>
+  <a href="#">Show me more</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ </button>  
+  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  //document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 

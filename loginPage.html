@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+         #cont{
+            /* border: 2px solid red; */
+            width:60%;
+            margin: auto;
+            /* height:650px; */
+            /* border-radius: 15px; */
+            padding: 26px;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            line-height: 35px;
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            /* align-items: center; */
+            
+        }
+        #head{
+          color: #202340  ;
+          font: Roboto,Arial,Helvetica,sans-serif;
+          margin: 10px 0px;
+          font-size: 28px;
+        }
+        #cont>div{
+          /* border: 2px solid green; */
+          height: 12%;
+          display: flex;
+          flex-direction: column;
+          width: 45%;
+        }
+        #cont >div~div{
+            /* border: 1px solid teal; */
+            width: 45%;
+        }
+        #cont>div:nth-child(1){
+            justify-content: center;
+            align-items: flex-start;
+        }
+        input[type="text"],
+input[type="email"],input[type="password"]{
+            /* border: 2px solid black; */
+            width:90%;
+            height: 38px;
+            border: 0.3px solid grey;
+            font-style: italic;
+        }
+       
+        input[type="submit"] { 
+            width:90%;
+        /* border: 2px solid green; */
+        margin: auto;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #414467 ;
+        color: white;
+        font-weight: bold;
+        margin-top: 30px;
+       }
+       #create {
+        background-color: white;
+        color: #414467;
+        font-weight: bold;
+        width: 90%;
+        border-radius: 20px;
+        height: 40px;
+       }
+       h2{
+        color: #202340;
+        font-size: 22px;
+        margin: 10px 0px;
+        font: Roboto,Arial,Helvetica,sans-serif;
+       }
+       h2+p {
+        color: #202340;
+        font-style: Roboto,Arial,Helvetica,sanss-serif;
+        margin: 5px 0px;
+        font-size: 14px;
+       }
+    </style>
+
+
+</head>
+<body>
+    <div id="cont">
+        <div>
+            <h1 id="head">Sign in</h1>
+            <div>
+               <form>
+                   <label>Email address:</label>
+                   <input placeholder="yourname@example.com" id="email" type="email" />
+                   <label>Passowrd:</label>
+                   <input placeholder="Please enter your password" id="pass" type="password" />
+                   <a href="underline"><p>Forget your password?</p></a>
+                   
+                   <input type="submit" value="Sign In">
+                   <!-- <p>Don't have account? <a href="signup.html">Sign up</a></p> -->
+                 </form>
+            </div>
+        </div>
+        <div>
+            <h2>Don't have an account?</h2>
+            <p>With a SHOP.COM account, you can
+                enjoy the following benefits: up to 50%
+                cashback on eligible purchases,
+                redeem discount coupons, order status
+                and history, saved payment options 
+                and addresses, exculsive emails and more.
+                <a href="underline"><p>Learn more</p></a> 
+            </p>
+            
+            <div>
+                <!-- <input  type="submit" value=""> -->
+                <button id="create">Create your new account</button>
+            </div>
+        </div>
+    
+</body>
+</html>
+<script>
+
+ document.querySelector("#create").addEventListener("click",function(){
+   
+ location.replace("SignUpPage.html")  
+// console.log("clicked")
+ })   
+
+ document.querySelector("form").addEventListener("submit",mylogin)
+ var data = JSON.parse(localStorage.getItem("details"))
+   
+ function mylogin(){
+    event.preventDefault()
+    checkUser();
+   }
+   function checkUser(){
+   let  uname= document.querySelector("#email").value;
+  let    upasw= document.querySelector("#pass").value
+  let flag=false;
+   for(var i =0;i<data.length;i++){
+    if(uname==data[i].email && upasw==data[i].pass){
+        flag=true;
+        // alert("login succesfully")
+    
+   }
+}   
+if(flag){
+    alert("Login successful")
+    // add here home page file name so that if sign in successful
+    // then it goes to home page or sliding page directyly
+    // window.location.href="homePage.html"
+}
+else{
+    alert("Wrong password")
+}
+   }
+ 
+</script>

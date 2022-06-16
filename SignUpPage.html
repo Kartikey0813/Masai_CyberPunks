@@ -100,9 +100,9 @@
             margin-top: -10px;
             margin-bottom: 15px;
         }
-        #alert > div {
-            /* border: 1px solid black; */
-        }
+        /* #alert > div {
+            border: 1px solid black;
+        } */
         #mobile {
             /* border: 1px solid red; */
             /* padding: 20px 0px opx 50px; */
@@ -125,9 +125,9 @@
             display: flex;
             gap: 5px;
         }
-        #opt1 > div {
-            /* border: 1px solid black; */
-        }
+        /* #opt1 > div {
+            border: 1px solid black;
+        } */
         input[type="checkbox"] {
             margin-top: 18px;
         }
@@ -136,9 +136,9 @@
             display: flex;
             gap: 5px;
         }
-        #opt2 > div {
-            /* border: 1px solid black; */
-        }
+       /* #opt2 > div {
+            border: 1px solid black;
+       } */
         #capta{
             border: #f3f4f7;
             border: 1.5px solid  lightgrey;
@@ -155,9 +155,9 @@
             display: flex;
             gap: 10px;
         }
-        #capta1 > div{
-            /* border: 1px solid black; */
-        }
+        /* #capta1 > div{
+            border: 1px solid black;
+        } */
         div>img{
             /* border: 1px solid black; */
             display: block;
@@ -200,11 +200,11 @@
             <div id="password">
                 <div>
                     <p>Password*(At least 7 characters)</p>
-                    <input placeholder="Enter your password" id="pass" type="password" required />
+                    <input placeholder="Enter your password" id="pass" type="password" minlength="7" required />
                 </div>
                 <div>
                     <p>Confirm password*</p>
-                    <input placeholder="Please reenter your password" type="password" id="pass1">
+                    <input placeholder="Please reenter your password" type="password" minlength="7" id="pass1">
                 </div>
             </div>
             <h3>Text Message(SMS) Alerts:(Optional)</h3>
@@ -288,10 +288,15 @@
             mobileNo :document.querySelector("#mobile").value
 
         }
-
-       newarr.push(obj)
-    localStorage.setItem("details",JSON.stringify(newarr))
-    window.location.href="login.html"
+        if(obj.pass==obj.passConfirm){
+            // console.log("ys")
+            newarr.push(obj)
+            localStorage.setItem("details",JSON.stringify(newarr))
+            window.location.href="login.html"
+        }else{
+            alert("Uh oh! Your password and confirm password don't match!")
+        }
+  
     }
    
 </script>

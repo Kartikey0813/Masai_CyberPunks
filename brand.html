@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP.COM - Online Shopping Marketplace</title>
+    <link rel="icon"
+        href="data:image/png;base64,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"
+        type="image/icon type">
+    <style>
+        body {
+            /* margin: 0px; */
+        }
+        
+        #parent {
+            position: relative;
+        }
+        
+        #bigbox {
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid red; */
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+            background-color: #f0f1f7;
+            position: sticky;
+            top: 0;
+        }
+        
+        #image {
+            width: 100%;
+            height: 80px;
+            display: inline;
+        }
+        
+        #image2 {
+            width: 20%;
+            height: 20%;
+        }
+        
+        #categories {
+            margin: 0px 0px 0px 30px;
+            background-color: red;
+        }
+        
+        #imageBox {
+            margin: 10px 10px 10px 20px;
+            /* background-color: burlywood; */
+            width: 20%;
+        }
+        
+        #imageBox>div {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 25px;
+        }
+        
+        option {
+            font-size: 25px;
+            margin: 10px 0px 0px 40px;
+        }
+        
+        #searchBox {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            /* background-color: forestgreen; */
+        }
+        
+        #belowSearch {
+            display: flex;
+            /* background-color: burlywood; */
+            margin: 10px 40px 10px 40px;
+            width: 90%;
+            justify-content: space-evenly;
+        }
+        
+        p {
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        
+        #search {
+            margin: 20px 40px 10px 40px;
+            /* background-color: aquamarine; */
+        }
+        
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 30px;
+        }
+        
+        #rightBox {
+            display: flex;
+            flex-direction: column;
+            width: 29%;
+        }
+        
+        #rightBox>div {
+            /* background-color: aquamarine; */
+            width: 100%;
+        }
+        
+        #rightImg {
+            width: 100%;
+            height: 100px;
+            /* background-color: blue; */
+        }
+        
+        #cart {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .cat {
+            display: none;
+            font-size: 0.875rem;
+            color: #202340;
+            margin: 0 0 0 5px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+        
+        #cart>div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #exp {
+            width: 100%;
+            height: 3000px;
+            background-color: red;
+        }
+        #body {
+            display: flex;
+        }
+
+        #left {
+            width: 20%;
+            height: 1000px;
+        }
+
+        #left>div {
+            display: flex;
+            height: 30px;
+        }
+
+        #left>div>h3 {
+            width: 100%;
+            font-weight: 700;
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #left>div:hover {
+            cursor: pointer;
+            color: #0098b8;
+        }
+
+        #right {
+            width: 71%;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+        #first {
+            padding: 10px 400px 15px 10px;
+            width: 70%;
+            background-color: #f0f1f7;
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            grid-template-rows: repeat(8, 170px);
+            gap: 15px;
+        }
+
+        #first>div {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-color: white;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        #first>div:nth-child(1),
+        #first>div:nth-child(2),
+        #first>div:nth-child(3),
+        #first>div:nth-child(7),
+        #first>div:nth-child(8),
+        #first>div:nth-child(14),
+        #first>div:nth-child(17),
+        #first>div:nth-child(18),
+        #first>div:nth-child(19),
+        #first>div:nth-child(20),
+        #second>div:nth-child(1),
+        #second>div:nth-child(2),
+        #second>div:nth-child(11),
+        #fourth>div:nth-child(4),
+        #fifth>div,
+        #sixth>div {
+            border: 18px solid #0098b8;
+        }
+
+        #first>div>img {
+            height: 80%;
+            width: 60%;
+        }
+
+        #second {
+            padding: 10px 400px 15px 10px;
+            width: 70%;
+            background-color: #f0f1f7;
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            grid-template-rows: repeat(4, 170px);
+            gap: 15px;
+        }
+
+        #second>div {
+            display: grid;
+            align-items: center;
+            padding: 30px;
+            background-color: white;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        #third {
+            padding: 10px 400px 15px 10px;
+            width: 70%;
+            background-color: #f0f1f7;
+            display: grid;
+            grid-template-columns: 300px;
+            grid-template-rows: 170px;
+        }
+
+        #third>div {
+            display: grid;
+            align-items: center;
+            padding: 30px;
+            background-color: white;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        #fourth {
+            padding: 10px 400px 15px 10px;
+            width: 70%;
+            background-color: #f0f1f7;
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            grid-template-rows: repeat(2, 170px);
+            gap: 15px;
+        }
+
+        #fourth>div {
+            display: grid;
+            align-items: center;
+            padding: 30px;
+            background-color: white;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        #fifth,
+        #sixth,
+        #eightth,
+        #ninth {
+            padding: 10px 400px 15px 10px;
+            width: 70%;
+            background-color: #f0f1f7;
+            display: grid;
+            grid-template-columns: 300px;
+            grid-template-rows: 170px;
+        }
+
+        #fifth>div,
+        #sixth>div,
+        #seventh>div,
+        #eightth>div,
+        #ninth>div {
+            display: grid;
+            align-items: center;
+            padding: 30px;
+            background-color: white;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        #seventh {
+            padding: 10px 400px 15px 10px;
+            width: 70%;
+            background-color: #f0f1f7;
+            display: grid;
+            grid-template-columns: 300px 300px;
+            grid-template-rows: 170px;
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="bigbox">
+            <div id="imageBox">
+                <div>
+                    <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
+                </div>
+                <div>
+                    <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
+                    <span class="cat">Categories</span>
+                </div>
+            </div>
+
+            <div id="searchBox">
+                <div id="search"><input type="text" /></div>
+                <div id="belowSearch">
+                    <div>
+                        <p>Exclusive Brands</p>
+                    </div>
+                    <div>
+                        <p>Stores</p>
+                    </div>
+                    <div>
+                        <p>Deals</p>
+                    </div>
+                    <div>
+                        <p>SHOP Travel</p>
+                    </div>
+                    <div>
+                        <p>Departments</p>
+                    </div>
+                    <div>
+                        <p>ShopBuddy</p>
+                    </div>
+                    <div>
+                        <p>SHOP Local</p>
+                    </div>
+                </div>
+            </div>
+            <div id="rightBox">
+                <div>
+                    <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
+                </div>
+                <div id="cart">
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
+                        <span>Sign in</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="" />
+                        <span>Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+    <div id="left">
+        <div>
+            <h3>About us </h3>
+            <h3>+</h3>
+            <table>
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+            <h3>Help</h3>
+            <h3>+</h3>
+        </div>
+        <div>
+            <h3>Partner with us</h3>
+            <h3>+</h3>
+        </div>
+        <div>
+            <h3>Services</h3>
+            <h3>+</h3>
+        </div>
+        <div>
+            <h3>Terms & Privacy</h3>
+            <h3>+</h3>
+        </div>
+        <div>
+            <h3>Shipping Info</h3>
+        </div>
+        <div>
+            <h3>Return Policy</h3>
+        </div>
+        <div>
+            <h3>Contact us</h3>
+        </div>
+        <div>
+            <h3>Own Your Own SHOP Site</h3>
+        </div>
+    </div>
+    <div id="right">
+        <h1>Our Brands</h1>
+        <h2>Health & Nutrition</h2>
+        <div id="first">
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/isotonix-us-au-gb-hk-sg-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/prime-usca-hk-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/ultimate-aloe-usca-hk-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/advanced-level-90-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/bliss-new-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/glucosatrin-usca-au-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/heart-health-logo-trademark-cross.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/mochatonix-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/mpc-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/nutriclean-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/vitamind-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/isotonix-custom-cocktail-us-logo.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/nutri-physical-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/curcumin-extreme-usca-hk-sg-logo.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/awake-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/opc3Chews_usa_32979_LogoTreatment_200x75.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/Probiotics-10.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/thymenol-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/cannabiquin-logo-tm.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/cannabicool-logo-tm.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/pure-collagen-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/vivoquin-logo-trademark.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/bymygra-logo-trademark.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/neuro-focus-logo-trademark.svg" alt="">
+            </div>
+        </div>
+        <h2>Beauty</h2>
+        <div id="second">
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/motives-logo-black.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/ldv-usca-au-gb-es-hk-tw-sg-logo.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/fixx-au-tw-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/timeless-prescription-usca-mx-tw-logo.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/clearshield-usca-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/pentaxyl-usca-au-hk-tw-sg-logo.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/Royal_Spa_logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/skintelligence-usca-mx-hk-tw-logo.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/vitashield-usca-hk-tw-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/cell-labs-usca-au-gb-es-mx-sg-logo.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/ldv-hommes%C2%AE-logo-200x75.svg" alt="">
+            </div>
+        </div>
+        <h2>Jewelry</h2>
+        <div id="third">
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/layered-logo.svg" alt="">
+            </div>
+        </div>
+        <h2>Home</h2>
+        <div id="fourth">
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/global-care-us-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/pet-health-usca-hk-sg-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/pure-H2O-usca-hk-tw-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/snap-usca-sg-mys-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/shopdotcom-us-digital-gift-card.svg"
+                    alt="">
+            </div>
+        </div>
+        <h2>Baby</h2>
+        <div id="fifth">
+            <div>
+                <img src="https://img.shop.com/Image/Images/11module/MABrands/dna-miracles-us-ca-au-hk-sg-tw-mrktng-logo-new.svg"
+                    alt="">
+            </div>
+        </div>
+        <h2>Weight Management</h2>
+        <div id="sixth">
+            <div><img src="https://img.shop.com/Image/Images/11module/MABrands/tls-us-hk-logo.svg" alt=""></div>
+        </div>
+        <h2>Automotive</h2>
+        <div id="seventh">
+            <div><img src="https://img.shop.com/Image/Images/11module/MABrands/autoworks-usca-tw-logo.svg" alt=""></div>
+            <div><img src="https://img.shop.com/Image/Images/11module/MABrands/friction-free-3000-usca-tw-logo.svg"
+                    alt=""></div>
+        </div>
+        <h2>Entertainment</h2>
+        <div id="eightth">
+            <div><img src="https://img.shop.com/Image/Images/11module/MABrands/conquer-us-logo.svg" alt=""></div>
+        </div>
+        <h2>Electronics</h2>
+        <div id="ninth">
+            <div><img
+                    src="https://img.shop.com/Image/Images/11module/MABrands/stealth-radar-shield-usca-tw-sg-mys-logo.svg"
+                    alt=""></div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+
+<script>
+
+</script>

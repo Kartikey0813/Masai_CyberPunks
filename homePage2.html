@@ -275,7 +275,7 @@
                     <div id="cart">
                         <div>
                             <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
-                            <span><a id="link" href="SignUpPage.html">Sign in</a></span>
+                            <span><a id="link" href="loginPage.html">Sign in</a></span>
                         </div>
                         <div>
                             <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
@@ -543,7 +543,6 @@
 
     mensData.forEach(function(ele) {
         var box = document.createElement("div");
-        document.querySelector("#six").append(box);
 
         var i = document.createElement("img");
 
@@ -561,5 +560,6 @@
 
         button.innerText = "ADD TO CART";
         box.append(i, n, p, button);
+        document.querySelector("#six").append(box);
     });
 </script>

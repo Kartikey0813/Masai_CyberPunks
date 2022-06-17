@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Deals - SHOP.COM</title>
+    <link rel="icon"
+        href="data:image/png;base64,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"
+        type="image/icon type">
+    <style>
+        body {
+            /* margin: 0px; */
+        }
+        
+        #parent {
+            position: relative;
+        }
+        
+        #bigbox {
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid red; */
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+            background-color: #f0f1f7;
+            position: sticky;
+            top: 0;
+        }
+        
+        #image {
+            width: 100%;
+            height: 80px;
+            display: inline;
+        }
+        
+        #image2 {
+            width: 20%;
+            height: 20%;
+        }
+        
+        #categories {
+            margin: 0px 0px 0px 30px;
+            background-color: red;
+        }
+        
+        #imageBox {
+            margin: 10px 10px 10px 20px;
+            /* background-color: burlywood; */
+            width: 20%;
+        }
+        
+        #imageBox>div {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 25px;
+        }
+        
+        option {
+            font-size: 25px;
+            margin: 10px 0px 0px 40px;
+        }
+        
+        #searchBox {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            /* background-color: forestgreen; */
+        }
+        
+        #belowSearch {
+            display: flex;
+            /* background-color: burlywood; */
+            margin: 10px 40px 10px 40px;
+            width: 90%;
+            justify-content: space-evenly;
+        }
+        
+        p {
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        
+        #search {
+            margin: 20px 40px 10px 40px;
+            /* background-color: aquamarine; */
+        }
+        
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 30px;
+        }
+        
+        #rightBox {
+            display: flex;
+            flex-direction: column;
+            width: 29%;
+        }
+        
+        #rightBox>div {
+            /* background-color: aquamarine; */
+            width: 100%;
+        }
+        
+        #rightImg {
+            width: 100%;
+            height: 100px;
+            /* background-color: blue; */
+        }
+        
+        #cart {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .cat {
+            display: none;
+            font-size: 0.875rem;
+            color: #202340;
+            margin: 0 0 0 5px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+        
+        #cart>div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #exp {
+            width: 100%;
+            height: 3000px;
+            background-color: red;
+        }
+        #buttons {
+            background-color: #f0f1f7;
+            margin-top: 25px;
+        }
+
+        #buttons>button {
+            background-color: transparent;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 16px;
+            border: 1px solid rgb(198, 192, 192);
+            border-top: none;
+            border-bottom: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        h2 {
+            margin-top: 35px;
+        }
+
+        #buttons>button:hover {
+            color: #0098b8;
+            background-color: white;
+        }
+
+        #deals {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 365px);
+            grid-template-rows: 315px;
+            gap: 10px;
+            background-color: #f0f1f7;
+            padding: 10px 0px 10px 8px;
+        }
+
+        #deals>div {
+            background-color: white;
+        }
+
+        #deals>div>div {
+            display: flex;
+        }
+
+        #right>p {
+            margin-top: 10px;
+            margin-left: 15px;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        #right>button {
+            display: flex;
+            justify-items: center;
+            margin-left: 20px;
+            margin-top: 30px;
+            padding: -0px 40px -0px 30px;
+            border-radius: 20px;
+            background-color: white;
+            color: #202340;
+            border-color: #202340;
+            font-weight: 700;
+        }
+
+        #right>button:hover {
+            background-color: #202340;
+            color: white;
+            cursor: pointer;
+        }
+
+        #p {
+            margin-top: 140px;
+            margin-left: -350px;
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        #code {
+            display: flex;
+            margin-top: 180px;
+            margin-left: -280px;
+        }
+
+        #code>div:last-child>button {
+            margin-top: 12px;
+            margin-left: 5px;
+            padding: 5px;
+            border: dotted;
+            background-color: #f0f1f7;
+            font-weight: 700;
+        }
+
+        #code>div:last-child>button:hover {
+            background-color: #0098b8;
+            color: white;
+            cursor: pointer;
+        }
+
+        #bottom {
+            margin-top: 280px;
+            margin-left: -146px;
+            width: 100%;
+            height: 30px;
+            background-color: #f55a4d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+            color: white;
+        }
+
+        #bottom>div:last-child>img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #more {
+            height: 30px;
+            background-color: #f0f1f7;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+
+        #more>h3:hover {
+            cursor: pointer;
+            color: #0098b8;
+        }
+
+        #main {
+            display: flex;
+        }
+
+        #deal-type {
+            width: 15%;
+            border-right: 1px solid rgb(201, 199, 199);
+        }
+
+        #hot-deals {
+            width: 65%;
+            height: 100px;
+            /* border: 1px solid green; */
+            margin-top: -25px;
+            margin-left: 20px;
+        }
+
+        #add {
+            width: 20%;
+            height: 100px;
+            /* border: 1px solid green; */
+        }
+
+        #sort {
+            width: 100%;
+            padding: 10px;
+            font-weight: bolder;
+            background-color: #f0f1f7;
+            border: 1px solid rgb(212, 206, 206);
+        }
+
+        .p {
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        .p:hover {
+            cursor: pointer;
+            color: #0098b8;
+        }
+
+        #deal-type>div {
+            display: flex;
+            height: 30px;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        #letter {
+            height: 100px;
+            width: 100%;
+            display: grid;
+            flex-wrap: wrap;
+            margin-top: -20px;
+        }
+
+        #letter>div {
+            margin-right: 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        #letter>div:hover {
+            cursor: pointer;
+            color: #0098b8;
+        }
+
+        #letter>div:first-child {
+            background-color: #f0f1f7;
+            padding: 5px;
+        }
+
+        #code1 {
+            display: flex;
+        }
+
+        #code1>div:last-child>button {
+            margin-top: 12px;
+            margin-left: 5px;
+            padding: 5px;
+            border: dotted;
+            background-color: #f0f1f7;
+            font-weight: 700;
+        }
+
+        #code1>div:last-child>button:hover {
+            background-color: #0098b8;
+            color: white;
+            cursor: pointer;
+        }
+
+        div>h2:hover {
+            color: #0098b8;
+            cursor: pointer;
+        }
+
+        h2+p {
+            font-weight: 700;
+        }
+
+        u:hover {
+            color: #0098b8;
+            cursor: pointer;
+            text-decoration-line: none;
+        }
+
+        #code1>div:last-child {
+            display: flex;
+        }
+
+        #code1>div:last-child>p {
+            margin-left: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        #hot-deals>div>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #hot-deals>div>div>div:last-child>button {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: #202340;
+            border-color: #202340;
+            font-weight: 700;
+            font-size: 17px;
+            background-color: white;
+            margin-top: -25px;
+            margin-bottom: 10px;
+        }
+        #hot-deals>div>div>div:last-child>button:hover{
+            color: white;
+            background-color: #202340;
+            cursor: pointer;
+        }
+        .socialMed{
+            width: 25px;
+            height: 25x;
+            margin-right: 5px;
+        }
+        #add{
+            margin-top: 55px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="bigbox">
+            <div id="imageBox">
+                <div>
+                    <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
+                </div>
+                <div>
+                    <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
+                    <span class="cat">Categories</span>
+                </div>
+            </div>
+
+            <div id="searchBox">
+                <div id="search"><input type="text" /></div>
+                <div id="belowSearch">
+                    <div>
+                        <p>Exclusive Brands</p>
+                    </div>
+                    <div>
+                        <p>Stores</p>
+                    </div>
+                    <div>
+                        <p>Deals</p>
+                    </div>
+                    <div>
+                        <p>SHOP Travel</p>
+                    </div>
+                    <div>
+                        <p>Departments</p>
+                    </div>
+                    <div>
+                        <p>ShopBuddy</p>
+                    </div>
+                    <div>
+                        <p>SHOP Local</p>
+                    </div>
+                </div>
+            </div>
+            <div id="rightBox">
+                <div>
+                    <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
+                </div>
+                <div id="cart">
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
+                        <span>Sign in</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="" />
+                        <span>Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="buttons"></div>
+    <h2>Featured Hot Deals</h2>
+    <div id="deals">
+        <div>
+            <div>
+                <div id="left">
+                    <img src="https://img.shop.com/Image/featuredhotdeal/shp-US-ENG-LATTELIER-125x1251653515987197-img.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <div id="right">
+                        <p>Lattelier</p>
+                        <button>
+                            <p style="padding-right: 20px; width: 90px;">Get the Deal</p><img
+                                style="width:20px; margin-top: 10px;"
+                                src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <p id="p">Mid-Year Sale 25% off Sitewide with code: LATMIDSALE25</p>
+                <div id="code">
+                    <div>
+                        <p>Code:</p>
+                    </div>
+                    <div>
+                        <button onclick="copy()">LATMIDSALE25</button>
+                    </div>
+                </div>
+                <p style="margin-top:230px; margin-left:-165px;"> Up to 6.00%Cashback</p>
+                <div id="bottom">
+                    <div>
+                        <h4>FEATURED</h4>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div id="left">
+                    <img src="https://img.shop.com/Image/featuredhotdeal/shp-US-ENG-BeyondPolish-June221654629029889.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <div id="right">
+                        <p>Beyond Polish</p>
+                        <button>
+                            <p style="padding-right: 20px; width: 90px;">Get the Deal</p><img
+                                style="width:20px; margin-top: 10px;"
+                                src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <p id="p">SHOP.COM Exclusive! Buy 1 Get 1 15% Off with code SHOP15</p>
+                <div id="code">
+                    <div>
+                        <p>Code:</p>
+                    </div>
+                    <div>
+                        <button onclick="copy()">SHOP15</button>
+                    </div>
+                </div>
+                <p style="margin-top:230px; margin-left:-135px;"> Up to 10.00%Cashback</p>
+                <div id="bottom">
+                    <div>
+                        <h4>FEATURED</h4>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div id="left">
+                    <img src="https://img.shop.com/Image/featuredhotdeal/us-eng-plants-20poff-mp16951-jun221654797872339.png"
+                        alt="">
+                </div>
+                <div>
+                    <div id="right">
+                        <p>Plants.com</p>
+                        <button>
+                            <p style="padding-right: 20px; width: 90px;">Get the Deal</p><img
+                                style="width:20px; margin-top: 10px;"
+                                src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <p id="p">Get 20% off Gifts Dads Dig for Father's Day at plants.com!</p>
+                <div id="code">
+                    <div>
+                        <p>Code:</p>
+                    </div>
+                    <div>
+                        <button onclick="copy()">FATHERS20</button>
+                    </div>
+                </div>
+                <p style="margin-top:230px; margin-left:-165px;"> Up to 8.00%Cashback</p>
+                <div id="bottom">
+                    <div>
+                        <h4>FEATURED</h4>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div id="left">
+                    <img src="https://img.shop.com/Image/featuredhotdeal/shp-us-eng-MandD-june221655326025939.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <div id="right">
+                        <p>Melissa & Doug</p>
+                        <button>
+                            <p style="padding-right: 20px; width: 90px;">Get the Deal</p><img
+                                style="width:20px; margin-top: 10px;"
+                                src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <p id="p">Mid-Year Sale 25% off Sitewide with code: LATMIDSALE25</p>
+                <div id="code">
+                    <div>
+                        <p>Code:</p>
+                    </div>
+                    <div>
+                        <button onclick="copy()">PRETENDJUN22</button>
+                    </div>
+                </div>
+                <p style="margin-top:230px; margin-left:-165px;"> Up to 5.00%Cashback</p>
+                <div id="bottom">
+                    <div>
+                        <h4>FEATURED</h4>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="more">
+        <h3>+ All Featured Deals</h3>
+    </div>
+    <div id="main">
+        <div id="deal-type">
+            <select id="sort">
+                <option value="Alphabetical">Sort:Alphabetical</option>
+                <option value="Most recent">Most recent</option>
+                <option value="About to Expire">About to Expire</option>
+            </select>
+            <hr>
+            <h3>Deal Type</h3>
+            <div class="p">All</div>
+            <div class="p">Category</div>
+            <div class="p">Clearance</div>
+            <div class="p">Coupon</div>
+            <div class="p">Curbside Pickup</div>
+            <div class="p">Dollar</div>
+            <div class="p">FreeShipping</div>
+            <div class="p">Offer</div>
+            <div class="p">One Cart Coupon</div>
+            <div class="p">Percent</div>
+            <div class="p">Product</div>
+            <div class="p">Rebates</div>
+            <div class="p">Sale</div>
+            <hr>
+            <h3>Filter by Letter:</h3>
+            <div id="letter">
+                <div>All</div>
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+                <div>D</div>
+                <div>E</div>
+                <div>F</div>
+                <div>G</div>
+                <div>H</div>
+                <div>I</div>
+                <div>J</div>
+                <div>K</div>
+                <div>L</div>
+                <div>M</div>
+                <div>N</div>
+                <div>O</div>
+                <div>P</div>
+                <div>Q</div>
+                <div>R</div>
+                <div>S</div>
+                <div>T</div>
+                <div>U</div>
+                <div>V</div>
+                <div>W</div>
+                <div>X</div>
+                <div>Y</div>
+                <div>Z</div>
+                <div>123...</div>
+            </div>
+        </div>
+        <div id="hot-deals">
+            <h1>Hot Deals</h1>
+            <hr>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">$75 off $225+ Orders.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <p>Code:</p>
+                        </div>
+                        <div>
+                            <button onclick="copy()">PAFJUNE</button>
+                            <p>Expires: 07/01/2022</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">$50 off $225 Order.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <p>Code:</p>
+                        </div>
+                        <div>
+                            <button onclick="copy()">JUNE50</button>
+                            <p>Expires: 07/01/2022</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">Free Shipping on any Order of $149+.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <!-- <p>Code:</p> -->
+                        </div>
+                        <div>
+                            <!-- <button onclick="copy()">PAFJUNE</button> -->
+                            <p>Expires: ongoing</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">Free Shipping on Select Books.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <!-- <p>Code:</p> -->
+                        </div>
+                        <div>
+                            <!-- <button onclick="copy()">PAFJUNE</button> -->
+                            <p>Expires: ongoing</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">Free Shipping to Australia.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <!-- <p>Code:</p> -->
+                        </div>
+                        <div>
+                            <!-- <button onclick="copy()">PAFJUNE</button> -->
+                            <p>Expires: ongoing</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">$75 off $225+ Orders.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <p>Code:</p>
+                        </div>
+                        <div>
+                            <button onclick="copy()">PAFJUNE</button>
+                            <p>Expires: 07/01/2022</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">$75 off $225+ Orders.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <p>Code:</p>
+                        </div>
+                        <div>
+                            <button onclick="copy()">PAFJUNE</button>
+                            <p>Expires: 07/01/2022</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">$75 off $225+ Orders.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <p>Code:</p>
+                        </div>
+                        <div>
+                            <button onclick="copy()">PAFJUNE</button>
+                            <p>Expires: 07/01/2022</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <h2 style="margin-bottom:-12px; margin-top: -0px;">$75 off $225+ Orders.</h2>
+                <p style="margin-bottom: -8px;">A Pea In The Pond <u>See More from Merchant</u></p>
+                <div>
+                    <div id="code1">
+                        <div>
+                            <p>Code:</p>
+                        </div>
+                        <div>
+                            <button onclick="copy()">PAFJUNE</button>
+                            <p>Expires: 07/01/2022</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Get the Deal <img style="width:20px; margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/128/2413/2413446.png" alt=""></button>
+                        <img class="socialMed" style="margin-left:75px ;" src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" alt="">
+                        <img class="socialMed" src="https://cdn-icons-png.flaticon.com/128/145/145812.png" alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            
+        </div>
+        <div id="add">
+            <img src="https://img.shop.com/Image/featuredhotdeal/NutriPhysical_USA_84399_SHOP_Banner_NutriPhysical_Campaign_media1608306245816.jpg" alt="">
+            <img src="https://img.shop.com/Image/featuredhotdeal/shop-usa-97717-best-of-web-banner-jan221643658486527.jpeg" alt="">
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
+<script>
+    let names = ["Featured", "Favorite Stores", "All Stores", "Deals", "ShopLocal"]
+    for (let i = 0; i < names.length; i++) {
+        let btn = document.createElement("button");
+        btn.innerText = names[i];
+        document.querySelector("#buttons").append(btn);
+    }
+    function copy() {
+        alert("Coupon code copied. Use at store!")
+    }
+</script>

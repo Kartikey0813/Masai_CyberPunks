@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stores A-Z | Payment Page</title>
+    <style>
+      
+      #cont{
+            /* border: 2px solid red; */
+            width:33%;
+            margin: auto;
+            /* height:650px; */
+            border-radius: 15px;
+            padding: 26px;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+            line-height: 40px;
+      
+        }
+        #cont>div:nth-child(1){
+            width:80%;
+            margin: auto;
+            font-weight: bold;
+            font-size: 19px;
+            /* border: 2px solid red; */
+            color: #414467;
+        }
+        /* #cont >div{
+            border: 2px solid red;
+        } */
+        form{
+          /* border: 2px solid green; */
+          /* height: 12%; */
+          display: flex;
+          flex-direction: column;
+          
+        }
+        
+        input[type="text"],
+input[type="number"],input[type="month"]{
+           
+            width:90%;
+            height: 40px;
+            border: 0.3px solid grey;
+            border-radius: 5px;
+            /* padding-left: 20px; */
+            margin: 20px;
+            
+        }
+    
+        input[type="submit"] {
+            width:90%;
+        /* border: 2px solid green; */
+        margin: auto;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #414467;
+        color: white;
+        font-weight: bold;
+        margin: 20px;
+}
+    </style>
+</head>
+<body>
+    <!-- <div class="paymentDetails">
+        <h4>Payment Method Using <span>Credit/Debit/ATM Card</span></h4>
+        <div class="inputDetails">
+          <input type="text" name="name" id="name" placeholder="Enter your Name">
+          <input type="number" name="name" id="number" placeholder="Enter your Card Number">
+      
+          <div class="dateInput"> 
+            <input type="month" name="month" id="month" value="data">
+            <input type="number" name="cvv" id="cvv" placeholder="Cvv">
+            
+          </div>
+          <button>Pay <span>3000</span></button>
+        </div>
+      </div> -->
+      <div id="cont">
+        <div>Payment Method Using Credit/Debit/ATM Card</div>
+        <div>
+            <form>
+                <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                <input type="number" id="number" placeholder="Enter your Card Number" minlength="16" required>
+                <input type="month" name="month" id="month" value="data">
+                <input type="number" name="cvv" id="cvv" placeholder="Cvv" required>
+                <input type="submit" value="Pay">
+            </form>
+        </div>
+        
+      </div>
+      
+</body>
+</html>
+<script>
+    // payment gateway
+    document.querySelector("form").addEventListener("submit",function(event){
+     event.preventDefault()
+        var num = '1111222233334444'
+        var date = '2025-12'
+        var cvv = '123'
+        var cardNumber = document.getElementById("number").value 
+        var cardDate = document.getElementById("month").value 
+        var cvv1 = document.getElementById("cvv").value
+        if(num==cardNumber && date==cardDate && cvv==cvv1){
+            window.location.href="otp.html"
+            // alert("login")
+        }
+        else{
+            alert("wrong card number")
+        }
+    })
+    
+ 
+    
+</script>

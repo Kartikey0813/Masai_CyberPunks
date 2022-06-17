@@ -543,7 +543,6 @@
 
     mensData.forEach(function(ele) {
         var box = document.createElement("div");
-        document.querySelector("#six").append(box);
 
         var i = document.createElement("img");
 
@@ -561,5 +560,6 @@
 
         button.innerText = "ADD TO CART";
         box.append(i, n, p, button);
+        document.querySelector("#six").append(box);
     });
 </script>

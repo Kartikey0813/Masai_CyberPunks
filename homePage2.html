@@ -7,12 +7,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+        body {
+            margin: 0px;
+        }
+        
+        #container {
+            position: relative;
+        }
+        
+        #bigbox {
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid red; */
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+            background-color: #f0f1f7;
+            position: fixed;
+            top: 0;
+        }
+        
+        #image {
+            width: 100%;
+            height: 80px;
+            display: inline;
+        }
+        
+        #image2 {
+            width: 20%;
+            height: 20%;
+        }
+        
+        #categories {
+            margin: 0px 0px 0px 30px;
+            background-color: red;
+        }
+        
+        #imageBox {
+            margin: 10px 10px 10px 20px;
+            /* background-color: burlywood; */
+            width: 20%;
+        }
+        
+        #imageBox>div {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 25px;
+        }
+        
+        option {
+            font-size: 25px;
+            margin: 10px 0px 0px 40px;
+        }
+        
+        #searchBox {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            /* background-color: forestgreen; */
+        }
+        
+        #belowSearch {
+            display: flex;
+            /* background-color: burlywood; */
+            margin: 10px 40px 10px 40px;
+            width: 90%;
+            justify-content: space-evenly;
+        }
+        
+        p {
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        
+        #search {
+            margin: 20px 40px 10px 40px;
+            /* background-color: aquamarine; */
+        }
+        
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 30px;
+        }
+        
+        #rightBox {
+            display: flex;
+            flex-direction: column;
+            width: 29%;
+        }
+        
+        #rightBox>div {
+            /* background-color: aquamarine; */
+            width: 100%;
+        }
+        
+        #rightImg {
+            width: 100%;
+            height: 100px;
+            /* background-color: blue; */
+        }
+        
+        #cart {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .cat {
+            display: none;
+            font-size: 0.875rem;
+            color: #202340;
+            margin: 0 0 0 5px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+        
+        #cart>div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #exp {
+            width: 100%;
+            height: 3000px;
+            background-color: red;
+        }
+        
         * {
             padding: 0px;
             margin: 0px;
         }
         
         #one {
+            margin-top: 200px;
             display: flex;
             justify-content: space-between;
         }
@@ -88,36 +218,104 @@
             justify-content: center;
             align-items: center;
         }
+        
+        #link {
+            text-decoration: none;
+            color: inherit;
+            outline: 0;
+            cursor: auto;
+        }
     </style>
 </head>
 
 <body>
-    <div id="one">
-        <div id="one-one">
-            <p>Your Shop Consultant is <strong>SHOP.COM</strong></p>
+    <div id="container">
+        <div id="parent">
+            <div id="bigbox">
+                <div id="imageBox">
+                    <div>
+                        <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
+                    </div>
+                    <div>
+                        <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
+                        <span class="cat">Categories</span>
+                    </div>
+                </div>
+
+                <div id="searchBox">
+                    <div id="search"><input type="text" /></div>
+                    <div id="belowSearch">
+                        <div>
+                            <p><a id="link" href="brand.html">Exclusive Brands</a></p>
+                        </div>
+                        <div>
+                            <p><a id="link" href="stores.html">Stores</a></p>
+                        </div>
+                        <div>
+                            <p>Deals</p>
+                        </div>
+                        <div>
+                            <p>SHOP Travel</p>
+                        </div>
+                        <div>
+                            <p>Departments</p>
+                        </div>
+                        <div>
+                            <p>ShopBuddy</p>
+                        </div>
+                        <div>
+                            <p>SHOP Local</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="rightBox">
+                    <div>
+                        <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
+                    </div>
+                    <div id="cart">
+                        <div>
+                            <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
+                            <span><a id="link" href="SignUpPage.html">Sign in</a></span>
+                        </div>
+                        <div>
+                            <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
+                            <span>Orders</span>
+                        </div>
+                        <div>
+                            <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="" />
+                            <span>Cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="one-two">
-            <p>Earn upto <strong>50%</strong></p>
-            <img id="one-two-img" src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt="" />
-            <p>
-                <strong>Cashback</strong> on eligible purchases.
-                <u><strong>Learn More</strong></u>
-            </p>
+        <div id="one">
+            <div id="one-one">
+                <p>Your Shop Consultant is <strong>SHOP.COM</strong></p>
+            </div>
+            <div id="one-two">
+                <p>Earn upto <strong>50%</strong></p>
+                <img id="one-two-img" src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt="" />
+                <p>
+                    <strong>Cashback</strong> on eligible purchases.
+                    <u><strong>Learn More</strong></u>
+                </p>
+            </div>
         </div>
+        <div id="two">
+            <h1>$50,073,228</h1>
+            <p>awarded in</p>
+            <img src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt="" />
+            <p style="margin-right: 16px"><strong> Cashback! </strong></p>
+            <button><h3>Learn More</h3></button>
+        </div>
+        <div id="three">
+            <img src="https://img.shop.com/Image/homepage/SHOP_USA_70582_Fathers_Day_eGift_Card_Social_Media_Assets_hero1655412701767.jpg" alt="" ; style="padding-top: 20px" />
+        </div>
+        <div id="four"></div>
+        <div id="five"></div>
+        <div id="six"></div>
     </div>
-    <div id="two">
-        <h1>$50,073,228</h1>
-        <p>awarded in</p>
-        <img src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt="" />
-        <p style="margin-right: 16px"><strong> Cashback! </strong></p>
-        <button><h3>Learn More</h3></button>
-    </div>
-    <div id="three">
-        <img src="https://img.shop.com/Image/homepage/SHOP_USA_70582_Fathers_Day_eGift_Card_Social_Media_Assets_hero1655412701767.jpg" alt="" ; style="padding-top: 20px" />
-    </div>
-    <div id="four"></div>
-    <div id="five"></div>
-    <div id="six"></div>
 </body>
 
 </html>

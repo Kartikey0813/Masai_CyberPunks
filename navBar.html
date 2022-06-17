@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>navTab</title>
     <style>
+        body {
+            margin: 0px;
+        }
+        
+        #parent {
+            position: relative;
+        }
+        
         #bigbox {
             width: 100%;
             height: 150px;
@@ -14,7 +22,7 @@
             display: flex;
             box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
             background-color: #f0f1f7;
-            position: absolute;
+            position: sticky;
             top: 0;
         }
         
@@ -131,59 +139,61 @@
 </head>
 
 <body>
-    <div id="bigbox">
-        <div id="imageBox">
-            <div>
-                <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
+    <div id="parent">
+        <div id="bigbox">
+            <div id="imageBox">
+                <div>
+                    <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
+                </div>
+                <div>
+                    <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
+                    <span class="cat">Categories</span>
+                </div>
             </div>
-            <div>
-                <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
-                <span class="cat">Categories</span>
-            </div>
-        </div>
 
-        <div id="searchBox">
-            <div id="search"><input type="text" /></div>
-            <div id="belowSearch">
-                <div>
-                    <p>Exclusive Brands</p>
-                </div>
-                <div>
-                    <p>Stores</p>
-                </div>
-                <div>
-                    <p>Deals</p>
-                </div>
-                <div>
-                    <p>SHOP Travel</p>
-                </div>
-                <div>
-                    <p>Departments</p>
-                </div>
-                <div>
-                    <p>ShopBuddy</p>
-                </div>
-                <div>
-                    <p>SHOP Local</p>
+            <div id="searchBox">
+                <div id="search"><input type="text" /></div>
+                <div id="belowSearch">
+                    <div>
+                        <p>Exclusive Brands</p>
+                    </div>
+                    <div>
+                        <p>Stores</p>
+                    </div>
+                    <div>
+                        <p>Deals</p>
+                    </div>
+                    <div>
+                        <p>SHOP Travel</p>
+                    </div>
+                    <div>
+                        <p>Departments</p>
+                    </div>
+                    <div>
+                        <p>ShopBuddy</p>
+                    </div>
+                    <div>
+                        <p>SHOP Local</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="rightBox">
-            <div>
-                <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
-            </div>
-            <div id="cart">
+            <div id="rightBox">
                 <div>
-                    <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
-                    <span>Sign in</span>
+                    <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
                 </div>
-                <div>
-                    <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
-                    <span>Orders</span>
-                </div>
-                <div>
-                    <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="" />
-                    <span>Cart</span>
+                <div id="cart">
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
+                        <span>Sign in</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="" />
+                        <span>Cart</span>
+                    </div>
                 </div>
             </div>
         </div>

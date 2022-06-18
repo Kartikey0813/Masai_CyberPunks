@@ -21,7 +21,7 @@
             height: 150px;
             /* border: 1px solid red; */
             display: flex;
-            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+            /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
             background-color: #f0f1f7;
             position: fixed;
             top: 0;
@@ -213,7 +213,11 @@
 
         #six {
             display: grid;
+<<<<<<< HEAD
             grid-template-columns: repeat(4, 24%);
+=======
+            grid-template-columns: repeat(4, 26%);
+>>>>>>> 2dc3b4b11ce08983378667f5c56fc1929753a095
             grid-template-rows: repeat(9, 500px);
             gap: 10px;
             justify-content: center;
@@ -393,19 +397,21 @@
                             <p><a id="link" href="stores.html">Stores</a></p>
                         </div>
                         <div>
-                            <p>Deals</p>
+                            <p><a id="link" href="deals.html">Deals</a></p>
                         </div>
                         <div>
-                            <p>SHOP Travel</p>
+                            <p><a id="link" href="shopTravel.html">SHOP Travel</a></p>
                         </div>
                         <div>
-                            <p>Departments</p>
+                            <p><a id="link" href="departments.html">Departments</a></p>
                         </div>
                         <div>
-                            <p>ShopBuddy</p>
+                            <p><a id="link" href="shopbuddy.html">ShopBuddy</a></p>
                         </div>
                         <div>
-                            <p>SHOP Local</p>
+                            <p>
+                                <a id="link" href="shoplocal.html">SHOP Local</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -462,6 +468,7 @@
         <div id="four"></div>
         <div id="five"></div>
         <div id="six"></div>
+        <img style="width: 100%" src="https://lh3.googleusercontent.com/bLAxjlv7H69fL9jqsxJAPV_GegpE_UBZHGPc5WjIPTfWTFDKu8DLbr1X-g1IUXi8mCQ-KXhqvHfhq8YytdgOLu58ZDdPbvhZYTvfrt8bjMG0k5XpCm-3Uu8V19oFpgr26uzy0IaMhw=w2400" alt="" />
     </div>
 </body>
 
@@ -483,8 +490,13 @@
     }, {
         title: "Sign in for best experience",
         image: "https://img.shop.com/Image/homepage/us-en-fathersday-banner-square-cs97556-may221652106174408.jpeg",
+<<<<<<< HEAD
         foot: "Father's Special"
     },];
+=======
+        foot: "Father's Special",
+    }, ];
+>>>>>>> 2dc3b4b11ce08983378667f5c56fc1929753a095
 
     arr1.forEach(function (ele) {
         var div = document.createElement("div");
@@ -507,7 +519,11 @@
         "https://www.shop.com/feo-cdn/V/h/WpSfMpjaU.webp"
     );
 
+<<<<<<< HEAD
     var mensData = [{
+=======
+    var pageData = [{
+>>>>>>> 2dc3b4b11ce08983378667f5c56fc1929753a095
         image_url: "https://img.shop.com/Image/240000/248600/248698/products/1935915380.jpg?size=300x300",
         name: "LUSHABLE WIPES",
         price: "1170",
@@ -689,7 +705,13 @@
         strikedoffprice: 1799,
     },];
 
+<<<<<<< HEAD
     mensData.forEach(function (ele) {
+=======
+    var newarr = [];
+
+    pageData.forEach(function(ele) {
+>>>>>>> 2dc3b4b11ce08983378667f5c56fc1929753a095
         var box = document.createElement("div");
 
         var i = document.createElement("img");
@@ -709,5 +731,11 @@
         button.innerText = "ADD TO CART";
         box.append(i, n, p, button);
         document.querySelector("#six").append(box);
+        box.addEventListener("click", jao);
+
+        function jao() {
+            newarr.push(ele);
+            localStorage.setItem("lobhai", JSON.stringify(newarr));
+        }
     });
 </script>

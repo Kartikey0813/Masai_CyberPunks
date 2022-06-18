@@ -6,8 +6,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stores A-Z | Payment Page</title>
     <style>
-      
-      #cont{
+         /* Navabar CSS */
+         body {
+            margin: 0px;
+        }
+        
+        #parent {
+            position: relative;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+        }
+        
+        #bigbox {
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid red; */
+            display: flex;
+            /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+            background-color: #f0f1f7;
+            position: sticky;
+            top: 0;
+            margin-bottom: 30px;
+        }
+        
+        #image {
+            width: 100%;
+            height: 80px;
+            display: inline;
+        }
+        
+        #image2 {
+            width: 20%;
+            height: 20%;
+        }
+        
+        #categories {
+            margin: 0px 0px 0px 30px;
+            background-color: red;
+        }
+        
+        #imageBox {
+            margin: 10px 10px 10px 20px;
+            /* background-color: burlywood; */
+            width: 20%;
+        }
+        
+        #imageBox>div {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 25px;
+        }
+        
+        option {
+            font-size: 25px;
+            margin: 10px 0px 0px 40px;
+        }
+        
+        #searchBox {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            /* background-color: forestgreen; */
+        }
+        
+        #belowSearch {
+            display: flex;
+            /* background-color: burlywood; */
+            margin: 10px 40px 10px 40px;
+            width: 90%;
+            justify-content: space-evenly;
+        }
+        
+        p {
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        
+        #search {
+            margin: 20px 40px 10px 40px;
+            /* background-color: aquamarine; */
+        }
+        
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 30px;
+        }
+        input[type="search"]{
+            border-radius: 30px;
+        }
+        
+        #rightBox {
+            display: flex;
+            flex-direction: column;
+            width: 29%;
+        }
+        
+        #rightBox>div {
+            /* background-color: aquamarine; */
+            width: 100%;
+        }
+        
+        #rightImg {
+            width: 100%;
+            height: 100px;
+            /* background-color: blue; */
+        }
+        
+        #cart {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .cat {
+            display: none;
+            font-size: 0.875rem;
+            color: #202340;
+            margin: 0 0 0 5px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+        
+        #cart>div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #exp {
+            width: 100%;
+            height: 3000px;
+            background-color: red;
+        }
+        a{
+            text-decoration: none;
+        }
+           /* PAYMENT CSS */
+          body {
+            margin: 0px;
+        }
+        
+        #parent {
+            position: relative;
+        }
+        
+        #bigbox {
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid red; */
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: #f0f1f7;
+            position: sticky;
+            top: 0;
+        }
+        
+        #image {
+            width: 100%;
+            height: 80px;
+            display: inline;
+        }
+        
+        #image2 {
+            width: 20%;
+            height: 20%;
+        }
+        
+        #categories {
+            margin: 0px 0px 0px 30px;
+            background-color: red;
+        }
+        
+        #imageBox {
+            margin: 10px 10px 10px 20px;
+            /* background-color: burlywood; */
+            width: 20%;
+        }
+        
+        #imageBox>div {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 25px;
+        }
+        
+        option {
+            font-size: 25px;
+            margin: 10px 0px 0px 40px;
+        }
+        
+        #searchBox {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            /* background-color: forestgreen; */
+        }
+        
+        #belowSearch {
+            display: flex;
+            /* background-color: burlywood; */
+            margin: 10px 40px 10px 40px;
+            width: 90%;
+            justify-content: space-evenly;
+        }
+        
+        p {
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        
+        #search {
+            margin: 20px 40px 10px 40px;
+            /* background-color: aquamarine; */
+        }
+        
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 30px;
+        }
+        
+        #rightBox {
+            display: flex;
+            flex-direction: column;
+            width: 29%;
+        }
+        
+        #rightBox>div {
+            /* background-color: aquamarine; */
+            width: 100%;
+        }
+        
+        #rightImg {
+            width: 100%;
+            height: 100px;
+            /* background-color: blue; */
+        }
+        
+        #cart {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .cat {
+            display: none;
+            font-size: 0.875rem;
+            color: #202340;
+            margin: 0 0 0 5px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+        
+        #cart>div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #exp {
+            width: 100%;
+            height: 3000px;
+            background-color: red;
+        }
+        a{
+            text-decoration: none;
+        }
+         /* PAYMENT CSS */
+        #cont{
             /* border: 2px solid red; */
             width:33%;
             margin: auto;
@@ -17,6 +287,7 @@
             /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
             box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
             line-height: 40px;
+            margin-bottom: 30px;
       
         }
         #cont>div:nth-child(1){
@@ -60,10 +331,191 @@ input[type="number"],input[type="month"]{
         color: white;
         font-weight: bold;
         margin: 20px;
-}
+       }
+
+       /* BOTTOM CSS */
+       body {
+            margin: 0px;
+            padding: 0px;
+        }
+        #main{
+            /* border: 1px solid red; */
+            padding: 2px ;
+        }
+        /* #main > div {
+            border: 1px solid teal; */
+            /* padding: 2px;
+        } */
+        #main > div > div {
+            /* border: 1px solid green; */
+            display: flex;
+            gap: 10px;
+            /* justify-content:flex-end ; */
+        }
+        #line1 {
+            justify-content: space-between;
+            background-color: #545871;
+            color: white;
+        }
+        #line1 + div {
+            /* border: 1px solid red; */
+            width: 90%;
+        }
+        #main > div > div + div {
+            /* border: 1px solid black; */
+            display: flex;
+          
+            /* justify-content: space-between; */
+        }
+        #line {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: flex-end;
+            background-color: #202340;
+            color: white;
+        }
+        #img1 {
+            /* border: 1px solid black; */
+            width: 12%;
+            /* display: block; */
+            /* margin: auto;
+            flex-direction: column; */
+            /* grid-template-columns: repeat(50px,1fr); */
+            display: flex;
+            margin-left:200px;
+        }
+        #img1 > div {
+            /* border: 1px solid red; */
+            width: 18%;
+            justify-content: flex-end;
+        }
+        div > img {
+            width: 100%;
+        }
+        #line > div + p {
+            justify-content: flex-start;
+        }
+        #line2 {
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+            
+        }
+        #line2a {
+            /* border: 1px solid red; */
+            margin-top: 5px;
+            
+        }
+        #line2a > div {
+            display: flex;
+        }
+        #image1 {
+            display: flex;
+            
+            width: 60%;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        
+        }
+        #image1 > div {
+            width: 11%;
+            height: 60px;
+            margin: auto;  
+        }
+        #image2 {
+            width: 7%;
+            margin: auto;
+            margin-top: 15px;
+        }
+        #line > div >a {
+            color: white;
+        }
+        p {
+            color: #545871;
+        }
+        #line2a > div > a {
+            color: rgb(84,88,113);
+            font-size: 14px;
+            font-style: Roboto,Arial,Helvetica,sans-serif ;
+        }
+        a > p {
+             color: white;
+             font-size: 13.56px;
+        }
+        #box{
+            color: white;
+            font-size: 13.56px;
+            font-style: Verdana,Geneva,sans-serif;
+        }
+        #line1 > div >p {
+            color: white;
+            font-size: 12px;
+            font-style: Roboto,Arial,Helvetica,sans-serif;
+            margin: 4.8px 2px;
+        }
     </style>
 </head>
 <body>
+    <div id="parent">
+        <div id="bigbox">
+            <div id="imageBox">
+                <div>
+                    <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
+                </div>
+                <div>
+                    <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
+                    <span class="cat">Categories</span>
+                </div>
+            </div>
+
+            <div id="searchBox">
+                <div id="search"><input type="search" /></div>
+                <div id="belowSearch">
+                    <div>
+                        <a href="brand.html"><p>Exclusive Brands</p></a>
+                    </div>
+                    <div>
+                        <a href="stores.html"><p>Stores</p></a>
+                    </div>
+                    <div>
+                        <a href="deals.html"><p>Deals</p></a>
+                    </div>
+                    <div>
+                        <p>SHOP Travel</p>
+                    </div>
+                    <div>
+                        <p>Departments</p>
+                    </div>
+                    <div>
+                        <p>ShopBuddy</p>
+                    </div>
+                    <div>
+                        <p>SHOP Local</p>
+                    </div>
+                </div>
+            </div>
+            <div id="rightBox">
+                <div>
+                    <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
+                </div>
+                <div id="cart">
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
+                        <span>Sign in</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="" />
+                        <span>Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAYMENT HTML -->
     <!-- <div class="paymentDetails">
         <h4>Payment Method Using <span>Credit/Debit/ATM Card</span></h4>
         <div class="inputDetails">
@@ -91,6 +543,100 @@ input[type="number"],input[type="month"]{
         </div>
         
       </div>
+
+      <!-- BOTTOM HTML -->
+      <div id="main">
+        <div>
+            <div id="line">
+               <div><a href="underline"><p>Link to this page </p></a></div>
+               <div><p id="box"> and tell all of your friends</p></div>
+            </div>
+            <div id="line1">
+                <div>
+                    <p> About Us | Accessibility Statement | Contact Us | Partner With Us | Services | Country/Region ^ | Connect ^ | Own Your Own SHOP Sites</p>
+                </div>
+                <div id="img1">
+                   
+                    <div>
+                        <img src="https://th.bing.com/th/id/R.d24704c39aa87c0ac1a91cd221f2ace6?rik=mhRmy3qhKDSkNA&riu=http%3a%2f%2ftechconnectmagazine.com%2fwp-content%2fuploads%2f2020%2f05%2fGMAIL.jpg&ehk=zJfJX5s%2f7f95SWG%2fvqPIODuA9gPvURyCO%2bK%2fzXW54yg%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    </div>
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/1200px-Facebook_logo_36x36.svg.png" alt="">
+                    </div>
+                    <div>
+                        <img src="https://th.bing.com/th/id/R.9a3a06f78cc0a8d79fce59e2de6da146?rik=nLAu3Z%2f0QUb%2fVw&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fiynque%2fios7-style%2f1024%2fTwitter-icon.png&ehk=eD3Hc5yQAyP3AKPJoYHB8yeWKwKdaVAswR5kxmodex4%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    </div>
+                    <div>
+                        <img src="https://th.bing.com/th/id/R.6f2455fecb9cf51564c7b58b057d723b?rik=OXKiitRHdks2dQ&riu=http%3a%2f%2fjonbennallick.co.uk%2fwp-content%2fuploads%2f2012%2f09%2fPinterest-Logo-Vector-by-Jon-Bennallick-02.png&ehk=tf229kfhLZZtva32IlXyp1dXDi%2fHS%2bYWHlWD6nG0QoI%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="line2">
+            <div>
+                <p>@1997-2022 Market America,Inc. or its affiliates. All other designates trasemarks, copyrights, and brands are the property of their 
+                respective owners.
+                </p>
+            </div>
+            <div>
+                <p>Only Customer will receive cashback on qualifying purchases. UnFranchise Owners/Shop Consultants will receive increased IBV 
+                    instead of cashback on qualifying purchases.
+                </p>
+            </div>
+            <div id="line2a">
+                <div>
+                    <a href="underline">Privacy Poicy |</a>
+                </div>
+                <div>
+                    <a href="underline">Terms of Use |</a>
+                </div>
+                <div>
+                    <a href="underline">Advertising Disclosure |</a>
+                </div>
+                <div>
+                    <a href="underline">Return Policy |</a>
+                </div>
+                <div>
+                    <a href="underline">Shipping Information |</a>
+                </div>
+            </div>
+        </div>
+        <div id="image1">
+            <div>
+                <img src="https://img.shop.com/Image/images/ir/Shop-ranks-19-in-newsweek-circle.png" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/images/ir/DC360_2021_rank_11_top_500_primary_merch_category.png" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_55_top_100.png" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_80_top_500_and_1000.png" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/images/ir/Shop-ranks-15-in-NC-circle.png" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/images/ir/commonwealth_2021_rank_25_top_2000_tw.png" alt="">
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/resources/images/torch-tafe2018-badge.png" alt="">
+            </div>
+            <div>
+                <img src="https://seal-greensboro.bbb.org/seals/blue-seal-153-100-marketamericashopcom-4002355.png" alt="">
+            </div>
+        </div>
+        <div id="image2" >
+            <div>
+                <img src="https://th.bing.com/th/id/R.a418d12dc4167aa6dddcf9f1036688d0?rik=0XX4V5Q%2bxYOmyA&riu=http%3a%2f%2fwww.aimconsulting.ch%2ffiles%2fimage%2ffilename%2f5368e837-80ac-4e29-8e59-0c984d74683c%2flogo+digicert+partner.png&ehk=OnfXrBe3MLPui%2fW4HsusVShF9fqXenHcYFUT9pf2VRo%3d&risl=&pid=ImgRaw&r=0" alt="">
+            </div>
+        </div>
+
+
+    </div>
       
 </body>
 </html>

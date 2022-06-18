@@ -361,7 +361,7 @@
         "https://www.shop.com/feo-cdn/V/h/WpSfMpjaU.webp"
     );
 
-    var mensData = [{
+    var pageData = [{
         image_url: "https://img.shop.com/Image/240000/248600/248698/products/1935915380.jpg?size=300x300",
         name: "LUSHABLE WIPES",
         price: "1170",
@@ -543,7 +543,9 @@
         strikedoffprice: 1799,
     }, ];
 
-    mensData.forEach(function(ele) {
+    var newarr = [];
+
+    pageData.forEach(function(ele) {
         var box = document.createElement("div");
 
         var i = document.createElement("img");
@@ -563,5 +565,11 @@
         button.innerText = "ADD TO CART";
         box.append(i, n, p, button);
         document.querySelector("#six").append(box);
+        box.addEventListener("click", jao);
+
+        function jao() {
+            newarr.push(ele);
+        }
+        localStorage.setItem("lobhai", JSON.stringify(newarr));
     });
 </script>

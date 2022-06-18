@@ -10,12 +10,12 @@
         body {
             margin: 0px;
         }
-
+        
         #container {
             position: relative;
             height: 1500px;
         }
-
+        
         #bigbox {
             width: 100%;
             height: 150px;
@@ -27,47 +27,47 @@
             position: fixed;
             top: 0;
         }
-
+        
         #image {
             width: 100%;
             height: 80px;
             display: inline;
         }
-
+        
         #image2 {
             width: 20%;
             height: 20%;
         }
-
+        
         #categories {
             margin: 0px 0px 0px 30px;
             background-color: red;
         }
-
+        
         #imageBox {
             margin: 10px 10px 10px 20px;
             /* background-color: burlywood; */
             width: 20%;
         }
-
+        
         #imageBox>div {
             display: flex;
             justify-content: space-evenly;
             font-size: 25px;
         }
-
+        
         option {
             font-size: 25px;
             margin: 10px 0px 0px 40px;
         }
-
+        
         #searchBox {
             display: flex;
             width: 60%;
             flex-direction: column;
             /* background-color: forestgreen; */
         }
-
+        
         #belowSearch {
             display: flex;
             /* background-color: burlywood; */
@@ -75,47 +75,47 @@
             width: 90%;
             justify-content: space-evenly;
         }
-
+        
         p {
             font-weight: lighter;
             font-size: 15px;
         }
-
+        
         #search {
             margin: 20px 40px 10px 40px;
             /* background-color: aquamarine; */
         }
-
+        
         input {
             width: 100%;
             height: 40px;
             border-radius: 30px;
         }
-
+        
         #rightBox {
             display: flex;
             flex-direction: column;
             width: 29%;
         }
-
+        
         #rightBox>div {
             /* background-color: aquamarine; */
             width: 100%;
         }
-
+        
         #rightImg {
             width: 100%;
             height: 100px;
             /* background-color: blue; */
         }
-
+        
         #cart {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             align-content: center;
         }
-
+        
         .cat {
             display: none;
             font-size: 0.875rem;
@@ -126,29 +126,29 @@
             text-overflow: ellipsis;
             max-width: 100px;
         }
-
+        
         #cart>div {
             display: flex;
             justify-content: center;
         }
-
+        
         #exp {
             width: 100%;
             height: 3000px;
             background-color: red;
         }
-
+        
         * {
             padding: 0px;
             margin: 0px;
         }
-
+        
         #one {
             margin-top: 200px;
             display: flex;
             justify-content: space-between;
         }
-
+        
         #one>div {
             display: flex;
             justify-content: center;
@@ -157,12 +157,12 @@
             padding: 5px;
             margin: 5px;
         }
-
+        
         #one-two-img {
             width: 20px;
             height: 20px;
         }
-
+        
         #two {
             display: flex;
             justify-content: space-evenly;
@@ -170,12 +170,12 @@
             width: 40%;
             margin: auto;
         }
-
+        
         #two>img {
             height: 30px;
             width: 30px;
         }
-
+        
         #two>button {
             border-radius: 30px;
             height: 45px;
@@ -184,11 +184,11 @@
             align-items: center;
             justify-content: center;
         }
-
+        
         #four {
             display: flex;
         }
-
+        
         #four>div {
             margin: 10px 10px 10px 10px;
             width: 25%;
@@ -200,31 +200,27 @@
             box-shadow: 1px 1px 2px 2px rgb(172, 172, 172);
             font-size: 20px;
         }
-
+        
         .photo {
             width: 300px;
             height: 350px;
             margin: 20px 10px 20px 10px;
         }
-
+        
         #five {
             display: flex;
             justify-content: center;
         }
-
+        
         #six {
             display: grid;
-<<<<<<< HEAD
-            grid-template-columns: repeat(4, 24%);
-=======
             grid-template-columns: repeat(4, 26%);
->>>>>>> 2dc3b4b11ce08983378667f5c56fc1929753a095
             grid-template-rows: repeat(9, 500px);
             gap: 10px;
             justify-content: center;
             align-items: center;
         }
-
+        
         #link {
             text-decoration: none;
             color: inherit;
@@ -242,152 +238,12 @@
                     <div>
                         <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
                     </div>
-                    <!-- Sidebar Start-->
                     <div>
-                        
+                        <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
                         <span class="cat">Categories</span>
-                        <script src="https://kit.fontawesome.com/3bb96e2cea.js" crossorigin="anonymous"></script>
-
-                        <style>
-                            body {
-                                font-family: "Lato", sans-serif;
-                            }
-
-                            .sidebar {
-                                height: 100%;
-                                width: 0;
-                                position: fixed;
-                                z-index: 1;
-                                top: 0;
-                                left: 0;
-                                background-color: #ffffff;
-                                overflow-x: hidden;
-                                transition: 0.5s;
-                                padding-top: 60px;
-                            }
-
-                            .sidebar a {
-                                padding: 8px 8px 8px 32px;
-                                text-decoration: none;
-                                font-size: 25px;
-                                color: #818181;
-                                display: block;
-                                transition: 0.3s;
-                            }
-
-                            .sidebar a:hover {
-                                color: #000000;
-                            }
-
-                            .sidebar .closebtn {
-                                position: absolute;
-                                top: 0;
-                                right: 25px;
-                                font-size: 36px;
-                                margin-left: 50px;
-                            }
-
-                            .openbtn {
-                                font-size: 20px;
-                                cursor: pointer;
-                                background-color: rgb(240,241,247);
-                                color: black;
-                                padding: 10px 15px;
-                                border: none;
-                            }
-
-                            .openbtn:hover {
-                                background-color: rgb(240,241,247);
-                                color: rgb(0, 168, 202);
-                            }
-
-                            .thinFont {
-                                font-weight: 500;
-                                margin-left: 5px;
-                                font-family: sans-serif;
-                            }
-
-                            #main {
-                                transition: margin-left .5s;
-                                padding: 5px;
-                            }
-
-                            /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-                            @media screen and (max-height: 450px) {
-                                .sidebar {
-                                    padding-top: 15px;
-                                }
-
-                                .sidebar a {
-                                    font-size: 18px;
-                                }
-                            }
-                        </style>
-                        </head>
-
-                        <body>
-
-                            <div id="mySidebar" class="sidebar">
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                                <br><img src="catlogo.png" alt="" width="150"> <br><br>
-                                <h3>Categories</h3>
-                                <a href="summersale.html">Summer</a>
-                                <a href="summersale.html">Men</a>
-                                <a href="summersale.html">Women</a>
-                                <a href="summersale.html">Sale</a>
-                                <a href="summersale.html">Clothes &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-                                <a href="summersale.html">Beauty &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-                                <a href="summersale.html">Home &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-                                <a href="summersale.html">Electronics &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-                                <a href="summersale.html">Track Orders &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-
-                                <hr>
-                                <h2>Account</h2>
-                                <a href="#"><i class="fa-solid fa-truck"><span class="thinFont"> Track
-                                            Orders</span></i></a>
-                                <a href="#"><i class="fa-solid fa-arrow-rotate-left"><span class="thinFont">Reorder
-                                            Items</span></i></a>
-                                <a href="#"><i class="fa-solid fa-circle-question"><span class="thinFont">
-                                            Help</span></i></a>
-                                <hr>
-                                <h2>Features</h2>
-                                <a href="#"><i class="fa-solid fa-list"><span class="thinFont"> List
-                                            Manager</span></i></a>
-                                <a href="#"><i class="fa-solid fa-gift"><span class="thinFont">Gift
-                                            Registry</span></i></a>
-                                <a href="#"><i class="fa-solid fa-e"><span class="thinFont"> eGifts</span></i></a>
-                                <a href="#"><i class="fa-solid fa-dollar-sign"><span class="thinFont"> Price
-                                            Alerts</span></i></a>
-                                <a href="#"><i class="fa-solid fa-bell-concierge"><span class="thinFont"> Shop
-                                            Services</span></i></a>
-                                <a href="#"><i class="fa-solid fa-location-dot"><span class="thinFont"> Shop
-                                            Local</span></i></a>
-                            </div>
-
-                            <div id="main">
-                                <button class="openbtn" onclick="openNav()">☰ </button>
-
-                            </div>
-
-                            <script>
-                                function openNav() {
-                                    document.getElementById("mySidebar").style.width = "250px";
-                                    document.getElementById("main").style.marginLeft = "250px";
-                                }
-
-                                function closeNav() {
-                                    document.getElementById("mySidebar").style.width = "0";
-                                    document.getElementById("main").style.marginLeft = "0";
-                                }
-                            </script>
                     </div>
-                </div>      
-                <!-- Sidebar End-->
+                </div>
+
                 <div id="searchBox">
                     <div id="search"><input type="text" /></div>
                     <div id="belowSearch">
@@ -418,14 +274,11 @@
                 </div>
                 <div id="rightBox">
                     <div>
-                        <img id="rightImg"
-                            src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg"
-                            alt="img" />
+                        <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
                     </div>
                     <div id="cart">
                         <div>
-                            <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
-                                alt="" />
+                            <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
                             <span><a id="link" href="loginPage.html">Sign in</a></span>
                         </div>
                         <div>
@@ -458,18 +311,14 @@
             <p>awarded in</p>
             <img src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt="" />
             <p style="margin-right: 16px"><strong> Cashback! </strong></p>
-            <button>
-                <h3>Learn More</h3>
-            </button>
+            <button><h3>Learn More</h3></button>
         </div>
         <div id="three">
-            <img src="https://img.shop.com/Image/homepage/SHOP_USA_70582_Fathers_Day_eGift_Card_Social_Media_Assets_hero1655412701767.jpg"
-                alt="" ; style="padding-top: 20px" />
+            <img src="https://img.shop.com/Image/homepage/SHOP_USA_70582_Fathers_Day_eGift_Card_Social_Media_Assets_hero1655412701767.jpg" alt="" ; style="padding-top: 20px" />
         </div>
         <div id="four"></div>
         <div id="five"></div>
         <div id="six"></div>
-        <img style="width: 100%" src="https://lh3.googleusercontent.com/bLAxjlv7H69fL9jqsxJAPV_GegpE_UBZHGPc5WjIPTfWTFDKu8DLbr1X-g1IUXi8mCQ-KXhqvHfhq8YytdgOLu58ZDdPbvhZYTvfrt8bjMG0k5XpCm-3Uu8V19oFpgr26uzy0IaMhw=w2400" alt="" />
     </div>
 </body>
 
@@ -491,15 +340,10 @@
     }, {
         title: "Sign in for best experience",
         image: "https://img.shop.com/Image/homepage/us-en-fathersday-banner-square-cs97556-may221652106174408.jpeg",
-<<<<<<< HEAD
-        foot: "Father's Special"
-    },];
-=======
         foot: "Father's Special",
     }, ];
->>>>>>> 2dc3b4b11ce08983378667f5c56fc1929753a095
 
-    arr1.forEach(function (ele) {
+    arr1.forEach(function(ele) {
         var div = document.createElement("div");
         document.getElementById("four").append(div);
         var p = document.createElement("p");
@@ -520,11 +364,7 @@
         "https://www.shop.com/feo-cdn/V/h/WpSfMpjaU.webp"
     );
 
-<<<<<<< HEAD
-    var mensData = [{
-=======
     var pageData = [{
->>>>>>> 2dc3b4b11ce08983378667f5c56fc1929753a095
         image_url: "https://img.shop.com/Image/240000/248600/248698/products/1935915380.jpg?size=300x300",
         name: "LUSHABLE WIPES",
         price: "1170",
@@ -704,15 +544,11 @@
         name: "APPLE AIRTAG",
         price: 1079,
         strikedoffprice: 1799,
-    },];
+    }, ];
 
-<<<<<<< HEAD
-    mensData.forEach(function (ele) {
-=======
     var newarr = [];
 
     pageData.forEach(function(ele) {
->>>>>>> 2dc3b4b11ce08983378667f5c56fc1929753a095
         var box = document.createElement("div");
 
         var i = document.createElement("img");

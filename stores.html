@@ -23,7 +23,7 @@
             height: 150px;
             /* border: 1px solid red; */
             display: flex;
-            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             background-color: #f0f1f7;
             position: sticky;
             top: 0;
@@ -87,7 +87,7 @@
             /* background-color: aquamarine; */
         }
         
-        input {
+        #search>input {
             width: 100%;
             height: 40px;
             border-radius: 30px;
@@ -137,6 +137,15 @@
             width: 100%;
             height: 3000px;
             background-color: red;
+        }
+        #link {
+            text-decoration: none;
+            color: inherit;
+            outline: 0;
+            cursor: pointer;
+        }
+        #belowSearch>div>p:hover{
+            color: #0098b8;
         }
         #buttons {
             background-color: #f0f1f7;
@@ -318,7 +327,7 @@
         #right {
             width: 84.5%;
             margin-left: 225px;
-            margin-top: -1242px;
+            margin-top: -1400px;
             padding-left: 10px;
         }
 
@@ -411,8 +420,145 @@
                     <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
                 </div>
                 <div>
-                    <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
                     <span class="cat">Categories</span>
+                    <script src="https://kit.fontawesome.com/3bb96e2cea.js" crossorigin="anonymous"></script>
+
+                    <style>
+                        body {
+                            font-family: "Lato", sans-serif;
+                        }
+                        
+                        .sidebar {
+                            height: 100%;
+                            width: 0;
+                            position: fixed;
+                            z-index: 1;
+                            top: 0;
+                            left: 0;
+                            background-color: #ffffff;
+                            overflow-x: hidden;
+                            transition: 0.5s;
+                            padding-top: 60px;
+                        }
+                        
+                        .sidebar a {
+                            padding: 8px 8px 8px 32px;
+                            text-decoration: none;
+                            font-size: 25px;
+                            color: #818181;
+                            display: block;
+                            transition: 0.3s;
+                        }
+                        
+                        .sidebar a:hover {
+                            color: #000000;
+                        }
+                        
+                        .sidebar .closebtn {
+                            position: absolute;
+                            top: 0;
+                            right: 25px;
+                            font-size: 36px;
+                            margin-left: 50px;
+                        }
+                        
+                        .openbtn {
+                            font-size: 20px;
+                            cursor: pointer;
+                            background-color: rgb(240, 241, 247);
+                            color: black;
+                            padding: 10px 15px;
+                            border: none;
+                        }
+                        
+                        .openbtn:hover {
+                            background-color: rgb(240, 241, 247);
+                            color: rgb(0, 168, 202);
+                        }
+                        
+                        .thinFont {
+                            font-weight: 500;
+                            margin-left: 5px;
+                            font-family: sans-serif;
+                        }
+                        
+                        #main {
+                            transition: margin-left .5s;
+                            padding: 5px;
+                        }
+                        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+                        
+                        @media screen and (max-height: 450px) {
+                            .sidebar {
+                                padding-top: 15px;
+                            }
+                            .sidebar a {
+                                font-size: 18px;
+                            }
+                        }
+                    </style>
+                    </head>
+
+                    <body>
+
+                        <div id="mySidebar" class="sidebar">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                            <br><img src="catlogo.png" alt="" width="150"> <br><br>
+                            <h3>Categories</h3>
+                            <a href="summersale.html">Summer</a>
+                            <a href="men.html">Men</a>
+                            <a href="women.html">Women</a>
+                            <a href="summersale.html">Sale</a>
+                            <a href="summersale.html">Clothes &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+                            <a href="summersale.html">Beauty &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+                            <a href="summersale.html">Home &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+                            <a href="summersale.html">Electronics &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+                            <a href="summersale.html">Track Orders &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+
+                            <hr>
+                            <h2>Account</h2>
+                            <a href="#"><i class="fa-solid fa-truck"><span class="thinFont"> Track
+                                        Orders</span></i></a>
+                            <a href="#"><i class="fa-solid fa-arrow-rotate-left"><span class="thinFont">Reorder
+                                        Items</span></i></a>
+                            <a href="#"><i class="fa-solid fa-circle-question"><span class="thinFont">
+                                        Help</span></i></a>
+                            <hr>
+                            <h2>Features</h2>
+                            <a href="#"><i class="fa-solid fa-list"><span class="thinFont"> List
+                                        Manager</span></i></a>
+                            <a href="#"><i class="fa-solid fa-gift"><span class="thinFont">Gift
+                                        Registry</span></i></a>
+                            <a href="#"><i class="fa-solid fa-e"><span class="thinFont"> eGifts</span></i></a>
+                            <a href="#"><i class="fa-solid fa-dollar-sign"><span class="thinFont"> Price
+                                        Alerts</span></i></a>
+                            <a href="#"><i class="fa-solid fa-bell-concierge"><span class="thinFont"> Shop
+                                        Services</span></i></a>
+                            <a href="#"><i class="fa-solid fa-location-dot"><span class="thinFont"> Shop
+                                        Local</span></i></a>
+                        </div>
+
+                        <div id="main">
+                            <button class="openbtn" onclick="openNav()">☰ </button>
+
+                        </div>
+
+                        <script>
+                            function openNav() {
+                                document.getElementById("mySidebar").style.width = "250px";
+                                document.getElementById("main").style.marginLeft = "250px";
+                            }
+
+                            function closeNav() {
+                                document.getElementById("mySidebar").style.width = "0";
+                                document.getElementById("main").style.marginLeft = "0";
+                            }
+                        </script>
                 </div>
             </div>
 
@@ -420,25 +566,27 @@
                 <div id="search"><input type="text" /></div>
                 <div id="belowSearch">
                     <div>
-                        <p>Exclusive Brands</p>
+                        <p><a id="link" href="brand.html">Exclusive Brands</a></p>
                     </div>
                     <div>
-                        <p>Stores</p>
+                        <p><a id="link" href="stores.html">Stores</a></p>
                     </div>
                     <div>
-                        <p>Deals</p>
+                        <p><a id="link" href="deals.html">Deals</a></p>
                     </div>
                     <div>
-                        <p>SHOP Travel</p>
+                        <p><a id="link" href="shopTravel.html">SHOP Travel</a></p>
                     </div>
                     <div>
-                        <p>Departments</p>
+                        <p><a id="link" href="departments.html">Departments</a></p>
                     </div>
                     <div>
-                        <p>ShopBuddy</p>
+                        <p><a id="link" href="shopbuddy.html">ShopBuddy</a></p>
                     </div>
                     <div>
-                        <p>SHOP Local</p>
+                        <p>
+                            <a id="link" href="shoplocal.html">SHOP Local</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -449,7 +597,7 @@
                 <div id="cart">
                     <div>
                         <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
-                        <span>Sign in</span>
+                        <span><a id="link" href="loginPage.html">Sign in</a></span>
                     </div>
                     <div>
                         <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
@@ -1317,6 +1465,7 @@
         </div>
         <hr>
     </div>
+    <img style="width: 100%; margin-top: 150px;" src="https://lh3.googleusercontent.com/bLAxjlv7H69fL9jqsxJAPV_GegpE_UBZHGPc5WjIPTfWTFDKu8DLbr1X-g1IUXi8mCQ-KXhqvHfhq8YytdgOLu58ZDdPbvhZYTvfrt8bjMG0k5XpCm-3Uu8V19oFpgr26uzy0IaMhw=w2400" alt="">
 </body>
 
 </html>

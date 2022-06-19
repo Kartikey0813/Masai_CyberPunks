@@ -9,19 +9,19 @@
 https://www.w3schools.com/howto/howto_css_images_side_by_side.asp   -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="catstyle.css">
-  <link rel="stylesheet" href="carousel.css">
-  <script src="catstyle.js"></script>
+    <link rel="stylesheet" href="catstyle.css">
+    <link rel="stylesheet" href="carousel.css">
+    <script src="catstyle.js"></script>
     <title>navTab</title>
     <style>
         body {
             margin: 0px;
         }
-        
+
         #parent {
             position: relative;
         }
-        
+
         #bigbox {
             width: 100%;
             height: 150px;
@@ -32,47 +32,47 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp   -->
             position: sticky;
             top: 0;
         }
-        
+
         #image {
             width: 100%;
             height: 80px;
             display: inline;
         }
-        
+
         #image2 {
             width: 20%;
             height: 20%;
         }
-        
+
         #categories {
             margin: 0px 0px 0px 30px;
             background-color: red;
         }
-        
+
         #imageBox {
             margin: 10px 10px 10px 20px;
             /* background-color: burlywood; */
             width: 20%;
         }
-        
+
         #imageBox>div {
             display: flex;
             justify-content: space-evenly;
             font-size: 25px;
         }
-        
+
         option {
             font-size: 25px;
             margin: 10px 0px 0px 40px;
         }
-        
+
         #searchBox {
             display: flex;
             width: 60%;
             flex-direction: column;
             /* background-color: forestgreen; */
         }
-        
+
         #belowSearch {
             display: flex;
             /* background-color: burlywood; */
@@ -80,47 +80,47 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp   -->
             width: 90%;
             justify-content: space-evenly;
         }
-        
+
         p {
             font-weight: lighter;
             font-size: 15px;
         }
-        
+
         #search {
             margin: 20px 40px 10px 40px;
             /* background-color: aquamarine; */
         }
-        
+
         input {
             width: 100%;
             height: 40px;
             border-radius: 30px;
         }
-        
+
         #rightBox {
             display: flex;
             flex-direction: column;
             width: 29%;
         }
-        
+
         #rightBox>div {
             /* background-color: aquamarine; */
             width: 100%;
         }
-        
+
         #rightImg {
             width: 100%;
             height: 100px;
             /* background-color: blue; */
         }
-        
+
         #cart {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             align-content: center;
         }
-        
+
         .cat {
             display: none;
             font-size: 0.875rem;
@@ -131,18 +131,19 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp   -->
             text-overflow: ellipsis;
             max-width: 100px;
         }
-        
+
         #cart>div {
             display: flex;
             justify-content: center;
         }
-        
+
         #exp {
             width: 100%;
             height: 3000px;
             background-color: red;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
     </style>
@@ -158,147 +159,148 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp   -->
                 <div>
                     <span class="cat">Categories</span>
                     <script src="https://kit.fontawesome.com/3bb96e2cea.js" crossorigin="anonymous"></script>
-                        <style>
-                            body {
-                                font-family: "Lato", sans-serif;
-                            }
-                            h1 { 
-    text-align: center; 
-    background-color: #00a8ca; 
-}
+                    <style>
+                        body {
+                            font-family: "Lato", sans-serif;
+                        }
 
+                        h1 {
+                            text-align: center;
+                            background-color: #00a8ca;
+                        }
+
+                        .sidebar {
+                            height: 100%;
+                            width: 0;
+                            position: fixed;
+                            z-index: 21;
+                            top: 0;
+                            left: 0;
+                            background-color: #ffffff;
+                            overflow-x: hidden;
+                            transition: 0.5s;
+                            padding-top: 25px;
+                        }
+
+                        .sidebar a {
+                            padding: 8px 8px 8px 32px;
+                            text-decoration: none;
+                            font-size: 25px;
+                            color: #818181;
+                            display: block;
+                            transition: 0.3s;
+                        }
+
+                        .sidebar a:hover {
+                            color: #000000;
+                        }
+
+                        .sidebar .closebtn {
+                            position: absolute;
+                            top: 0;
+                            right: 25px;
+                            font-size: 36px;
+                            margin-left: 50px;
+                        }
+
+                        .openbtn {
+                            font-size: 20px;
+                            cursor: pointer;
+                            background-color: rgb(240, 241, 247);
+                            color: black;
+                            padding: 10px 15px;
+                            border: none;
+                        }
+
+                        .openbtn:hover {
+                            background-color: rgb(240, 241, 247);
+                            color: rgb(0, 168, 202);
+                        }
+
+                        .thinFont {
+                            font-weight: 500;
+                            margin-left: 5px;
+                            font-family: sans-serif;
+                        }
+
+                        #main {
+                            transition: margin-left .5s;
+                            padding: 5px;
+                        }
+
+                        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+                        @media screen and (max-height: 450px) {
                             .sidebar {
-                                height: 100%;
-                                width: 0;
-                                position: fixed;
-                                z-index: 21;
-                                top: 0;
-                                left: 0;
-                                background-color: #ffffff;
-                                overflow-x: hidden;
-                                transition: 0.5s;
-                                padding-top: 25px;
+                                padding-top: 15px;
                             }
 
                             .sidebar a {
-                                padding: 8px 8px 8px 32px;
-                                text-decoration: none;
-                                font-size: 25px;
-                                color: #818181;
-                                display: block;
-                                transition: 0.3s;
+                                font-size: 18px;
+                            }
+                        }
+                    </style>
+                    </head>
+
+                    <body>
+
+                        <div id="mySidebar" class="sidebar">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                            <br><img src="catlogo.png" alt="" width="150"> <br><br>
+                            <h3>Categories</h3>
+                            <a href="summersale.html">Summer</a>
+                            <a href="men.html">Men</a>
+                            <a href="women.html">Women</a>
+                            <a href="summersale.html">Sale</a>
+                            <a href="summersale.html">Clothes &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+                            <a href="summersale.html">Beauty &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+                            <a href="summersale.html">Home &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+                            <a href="summersale.html">Electronics &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+                            <a href="summersale.html">Track Orders &nbsp;<r class="fa-solid fa-angle-right"><span
+                                        class="thinFont"></span></i></a>
+
+                            <hr>
+                            <h2>Account</h2>
+                            <a href="#"><i class="fa-solid fa-truck"><span class="thinFont"> Track
+                                        Orders</span></i></a>
+                            <a href="#"><i class="fa-solid fa-arrow-rotate-left"><span class="thinFont">Reorder
+                                        Items</span></i></a>
+                            <a href="#"><i class="fa-solid fa-circle-question"><span class="thinFont">
+                                        Help</span></i></a>
+                            <hr>
+                            <h2>Features</h2>
+                            <a href="#"><i class="fa-solid fa-list"><span class="thinFont"> List
+                                        Manager</span></i></a>
+                            <a href="#"><i class="fa-solid fa-gift"><span class="thinFont">Gift
+                                        Registry</span></i></a>
+                            <a href="#"><i class="fa-solid fa-e"><span class="thinFont"> eGifts</span></i></a>
+                            <a href="#"><i class="fa-solid fa-dollar-sign"><span class="thinFont"> Price
+                                        Alerts</span></i></a>
+                            <a href="#"><i class="fa-solid fa-bell-concierge"><span class="thinFont"> Shop
+                                        Services</span></i></a>
+                            <a href="#"><i class="fa-solid fa-location-dot"><span class="thinFont"> Shop
+                                        Local</span></i></a>
+                        </div>
+
+                        <div id="main">
+                            <button class="openbtn" onclick="openNav()">☰ </button>
+
+                        </div>
+
+                        <script>
+                            function openNav() {
+                                document.getElementById("mySidebar").style.width = "250px";
+                                document.getElementById("main").style.marginLeft = "250px";
                             }
 
-                            .sidebar a:hover {
-                                color: #000000;
+                            function closeNav() {
+                                document.getElementById("mySidebar").style.width = "0";
+                                document.getElementById("main").style.marginLeft = "0";
                             }
-
-                            .sidebar .closebtn {
-                                position: absolute;
-                                top: 0;
-                                right: 25px;
-                                font-size: 36px;
-                                margin-left: 50px;
-                            }
-
-                            .openbtn {
-                                font-size: 20px;
-                                cursor: pointer;
-                                background-color: rgb(240,241,247);
-                                color: black;
-                                padding: 10px 15px;
-                                border: none;
-                            }
-
-                            .openbtn:hover {
-                                background-color: rgb(240,241,247);
-                                color: rgb(0, 168, 202);
-                            }
-
-                            .thinFont {
-                                font-weight: 500;
-                                margin-left: 5px;
-                                font-family: sans-serif;
-                            }
-
-                            #main {
-                                transition: margin-left .5s;
-                                padding: 5px;
-                            }
-
-                            /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-                            @media screen and (max-height: 450px) {
-                                .sidebar {
-                                    padding-top: 15px;
-                                }
-
-                                .sidebar a {
-                                    font-size: 18px;
-                                }
-                            }
-                        </style>
-                        </head>
-
-                        <body>
-
-                            <div id="mySidebar" class="sidebar">
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                                <br><img src="catlogo.png" alt="" width="150"> <br><br>
-                                <h3>Categories</h3>
-                                <a href="summersale.html">Summer</a>
-                                <a href="men.html">Men</a>
-                                <a href="summersale.html">Women</a>
-                                <a href="summersale.html">Sale</a>
-                                <a href="summersale.html">Clothes &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-                                <a href="summersale.html">Beauty &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-                                <a href="summersale.html">Home &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-                                <a href="summersale.html">Electronics &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-                                <a href="summersale.html">Track Orders &nbsp;<r class="fa-solid fa-angle-right"><span
-                                            class="thinFont"></span></i></a>
-
-                                <hr>
-                                <h2>Account</h2>
-                                <a href="#"><i class="fa-solid fa-truck"><span class="thinFont"> Track
-                                            Orders</span></i></a>
-                                <a href="#"><i class="fa-solid fa-arrow-rotate-left"><span class="thinFont">Reorder
-                                            Items</span></i></a>
-                                <a href="#"><i class="fa-solid fa-circle-question"><span class="thinFont">
-                                            Help</span></i></a>
-                                <hr>
-                                <h2>Features</h2>
-                                <a href="#"><i class="fa-solid fa-list"><span class="thinFont"> List
-                                            Manager</span></i></a>
-                                <a href="#"><i class="fa-solid fa-gift"><span class="thinFont">Gift
-                                            Registry</span></i></a>
-                                <a href="#"><i class="fa-solid fa-e"><span class="thinFont"> eGifts</span></i></a>
-                                <a href="#"><i class="fa-solid fa-dollar-sign"><span class="thinFont"> Price
-                                            Alerts</span></i></a>
-                                <a href="#"><i class="fa-solid fa-bell-concierge"><span class="thinFont"> Shop
-                                            Services</span></i></a>
-                                <a href="#"><i class="fa-solid fa-location-dot"><span class="thinFont"> Shop
-                                            Local</span></i></a>
-                            </div>
-
-                            <div id="main">
-                                <button class="openbtn" onclick="openNav()">☰ </button>
-
-                            </div>
-
-                            <script>
-                                function openNav() {
-                                    document.getElementById("mySidebar").style.width = "250px";
-                                    document.getElementById("main").style.marginLeft = "250px";
-                                }
-
-                                function closeNav() {
-                                    document.getElementById("mySidebar").style.width = "0";
-                                    document.getElementById("main").style.marginLeft = "0";
-                                }
-                            </script>
+                        </script>
                 </div>
             </div>
 
@@ -306,13 +308,19 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp   -->
                 <div id="search"><input type="text" /></div>
                 <div id="belowSearch">
                     <div>
-                        <a href="brand.html"><p>Exclusive Brands</p></a>
+                        <a href="brand.html">
+                            <p>Exclusive Brands</p>
+                        </a>
                     </div>
                     <div>
-                        <a href="stores.html"><p>Stores</p></a>
+                        <a href="stores.html">
+                            <p>Stores</p>
+                        </a>
                     </div>
                     <div>
-                        <a href="deals.html"><p>Deals</p></a>
+                        <a href="deals.html">
+                            <p>Deals</p>
+                        </a>
                     </div>
                     <div>
                         <p>SHOP Travel</p>
@@ -330,7 +338,9 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp   -->
             </div>
             <div id="rightBox">
                 <div>
-                    <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
+                    <img id="rightImg"
+                        src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg"
+                        alt="img" />
                 </div>
                 <div id="cart">
                     <div>
@@ -351,101 +361,140 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp   -->
     </div>
     <!--Change Header Image-->
 
-<!---->
+    <!---->
 
-<!---->
+    <!---->
 
-<!--Start-->
+    <!--Start-->
 
-<style>
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      max-width: 300px;
-      margin: auto;
-      text-align: center;
-      font-family: arial;
-        padding: 50px;
-    width:16.5%;
-    float: left;
-    }
-    
-    .price {
-      color: grey;
-      font-size: 22px;
-    }
-    
-    .card button {
-      border: none;
-      outline: 0;
-      padding: 12px;
-      color: white;
-      background-color: #000;
-      text-align: center;
-      cursor: pointer;
-      width: 10%;
-      font-size: 18px;
-    }
-    
-    .card button:hover {
-      opacity: 0.7;
-    }
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            padding: 50px;
+            width: 16.5%;
+            float: left;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 10%;
+            font-size: 18px;
+        }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
     </style>
-   
-   
-    
-   <h1><p style="color:white">Shop by Category.</p></h1>
 
-    
+<div class="card">
+        <img src="https://img.shop.com/Image/270000/273800/273802/products/1761136199.jpg?plain&size=617x617"" alt="
+            Denim Jeans" style="width:100%">
+        <a href="#">Greenwich Cotton Polo Shirt
+            <p class="price">$26.99</p>
+    </div>
+
     <div class="card">
-      <img src="https://img.shop.com/Image/280000/289900/289943/products/1907414225.jpg?plain&size=400x400"" alt="Denim Jeans" style="width:100%">
-     <a href="#">Fiesta Americana Stars Luncheon Plate White
-      <p class="price">$26.99</p>
-      </div>
-     
+        <img src="https://img.shop.com/Image/270000/273800/273802/products/1926579689.jpg?plain&size=617x617"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Greenwich Cotton Polo Shirt
+            <p class="price">$19.99</p>
+    </div>
+
     <div class="card">
-      <img src="https://img.shop.com/Image/210000/217300/217306/products/1930512747__175x175__.jpg" alt="Denim Jeans" style="width:100%">
-     <a href="#">H For Happy 12-Count Americana Dinner Plates Multia>
-    
-      <p class="price">$19.99</p>
-      </div><div class="card">
-      <img src="https://img.shop.com/Image/240000/243500/243545/products/1908182382__175x175__.jpg" alt="Denim Jeans" style="width:100%">
-     <a href="#">H For Happy 12-Count Americana Dinner Plates Multia>
-    
-      <p class="price">$19.99</p>
-      </div><div class="card">
-      <img src="https://img.shop.com/Image/240000/243500/243545/products/1908182382__175x175__.jpg" alt="Denim Jeans" style="width:100%">
-     <a href="#">H For Happy 12-Count Americana Dinner Plates Multia>
-    
-      <p class="price">$19.99</p>
-      </div><div class="card">
-      <img src="https://img.shop.com/Image/240000/243500/243545/products/1908182382__175x175__.jpg" alt="Denim Jeans" style="width:100%">
-     <a href="#">H For Happy 12-Count Americana Dinner Plates Multia>
-    
-      <p class="price">$19.99</p>
-      </div><div class="card">
-      <img src="https://img.shop.com/Image/240000/243500/243545/products/1908182382__175x175__.jpg" alt="Denim Jeans" style="width:100%">
-     <a href="#">H For Happy 12-Count Americana Dinner Plates Multia>
-    
-      <p class="price">$19.99</p>
-      </div><div class="card">
-      <img src="https://img.shop.com/Image/240000/243500/243545/products/1908182382__175x175__.jpg" alt="Denim Jeans" style="width:100%">
-     <a href="#">H For Happy 12-Count Americana Dinner Plates Multia>
-    
-      <p class="price">$19.99</p>
-      </div><div class="card">
-      <img src="https://img.shop.com/Image/240000/243500/243545/products/1908182382__175x175__.jpg" alt="Denim Jeans" style="width:100%">
-     <a href="#">H For Happy 12-Count Americana Dinner Plates Multia>
-    
-      <p class="price">$19.99</p>
-      </div>
-      
-</div>
-<!---->
-<!--End-->
+        <img src="https://img.shop.com/Image/270000/273800/273802/products/1926579681.jpg?plain&size=617x617"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Greenwich Cotton Polo Shirt
+            <p class="price">$19.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/280000/289900/289943/products/1907385153.jpg?plain&size=500x500"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Dewalt Mens Cheverley Cargo Shorts
+            <p class="price">$19.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/280000/289900/289943/products/1907414225.jpg?plain&size=400x400"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Fiesta Americana Stars plain Gray huddy
+            <p class="price">$19.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/270000/273800/273802/products/1761136199.jpg?plain&size=617x617"" alt="
+            Denim Jeans" style="width:100%">
+        <a href="#">Greenwich Cotton Polo Shirt
+            <p class="price">$26.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/270000/273800/273802/products/1926579689.jpg?plain&size=617x617"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Greenwich Cotton Polo Shirt
+
+            <p class="price">$19.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/270000/273800/273802/products/1926579681.jpg?plain&size=617x617"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Greenwich Cotton Polo Shirt
+
+            <p class="price">$19.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/280000/289900/289943/products/1907385153.jpg?plain&size=500x500"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Dewalt Mens Cheverley Cargo Shorts
+            <p class="price">$19.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/280000/289900/289943/products/1907414225.jpg?plain&size=400x400"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Fiesta Americana Stars plain Gray huddy
+            <p class="price">$19.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/270000/273800/273802/products/1761136199.jpg?plain&size=617x617"" alt="
+            Denim Jeans" style="width:100%">
+        <a href="#">Greenwich Cotton Polo Shirt
+            <p class="price">$26.99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://img.shop.com/Image/270000/273800/273802/products/1926579681.jpg?plain&size=617x617"
+            alt="Denim Jeans" style="width:100%">
+        <a href="#">Greenwich Cotton Polo Shirt
+            <p class="price">$19.99</p>
+    </div>
+
+
+    </div>
+    <!---->
+    <!--End-->
 
 
 
-    
+
 </body>
 
 </html>

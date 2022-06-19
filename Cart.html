@@ -69,7 +69,13 @@
         <div id="id1">
             <h1>Your Cart</h1>
             <hr>
-            <div id="id3-id4-id5">
+            <div id="id3">
+                <img src="data" alt="">
+            </div>
+            <div id="id4">
+
+            </div>
+            <div id="id5">
 
             </div>
         </div>
@@ -94,10 +100,17 @@
     function estDel(){
         alert("Delievery in 4-5 Days")
     }
-    for(let i=0;i<arr.length;i++){
-            let data=document.getElementById("id3").innerHTML=arr[i].image_url;
-            // let Data=document.getElementById("id4").innerHTML=arr[i].name;
-            // let DaTa=document.getElementById("id5").innerHTML=arr[i].price;
+    // for(let i=0;i<arr.length;i++){
+            // let data=document.getElementById("id3").innerHTML=arr[0].image_url;
+        //     let Data=document.getElementById("id4").innerHTML=arr[1].name;
+        //     let DaTa=document.getElementById("id5").innerHTML=arr[2].price;
+        // //  }
+        displayCart(arr);
+        function displayCart(){
+            document.querySelector("tbody").innerHTML="";
+            arr.forEach(function(ele,index){
+                console.log(ele);
+            })
         }
     
 </script>

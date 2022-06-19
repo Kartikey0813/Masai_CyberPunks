@@ -6,7 +6,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
- #cont{
+        /* navbar CSS */
+        body {
+            margin: 0px;
+        }
+        
+        #parent {
+            position: relative;
+        }
+        
+        #bigbox {
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid red; */
+            display: flex;
+            /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: #f0f1f7;
+            position: sticky;
+            top: 0;
+        }
+        
+        #image {
+            width: 100%;
+            height: 80px;
+            display: inline;
+        }
+        
+        #image2 {
+            width: 20%;
+            height: 20%;
+        }
+        
+        #categories {
+            margin: 0px 0px 0px 30px;
+            background-color: red;
+        }
+        
+        #imageBox {
+            margin: 10px 10px 10px 20px;
+            /* background-color: burlywood; */
+            width: 20%;
+        }
+        
+        #imageBox>div {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 25px;
+        }
+        
+        option {
+            font-size: 25px;
+            margin: 10px 0px 0px 40px;
+        }
+        
+        #searchBox {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            /* background-color: forestgreen; */
+        }
+        
+        #belowSearch {
+            display: flex;
+            /* background-color: burlywood; */
+            margin: 10px 40px 10px 40px;
+            width: 90%;
+            justify-content: space-evenly;
+        }
+        
+        p {
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        
+        #search {
+            margin: 20px 40px 10px 40px;
+            /* background-color: aquamarine; */
+        }
+        
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 30px;
+        }
+        
+        #rightBox {
+            display: flex;
+            flex-direction: column;
+            width: 29%;
+        }
+        
+        #rightBox>div {
+            /* background-color: aquamarine; */
+            width: 100%;
+        }
+        
+        #rightImg {
+            width: 100%;
+            height: 100px;
+            /* background-color: blue; */
+        }
+        
+        #cart {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+            /* width: 10%; */
+        }
+       
+        
+        .cat {
+            display: none;
+            font-size: 0.875rem;
+            color: #202340;
+            margin: 0 0 0 5px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+        #cart {
+            margin-bottom: 100px;
+            /* margin-top: 10px; */
+
+        }
+        #cart>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 5px solid red; */
+            height: 15px;
+            align-content: center;
+            text-align: center;
+            gap: 5px;
+            
+        }
+        #cart >div >img {
+            height: 15px;
+            /* width: 100%; */
+        }
+        
+        #exp {
+            width: 100%;
+            height: 3000px;
+            background-color: red;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        /* OTP css */
+        #cont{
             /* border: 2px solid red; */
             width:28%;
             margin: auto;
@@ -76,9 +228,73 @@ img{
     margin-bottom: 20px;
     border: transparent;
 }
+
+/* bottom css */
+
     </style>
 </head>
 <body>
+    <!-- navbar html -->
+    <div id="parent">
+        <div id="bigbox">
+            <div id="imageBox">
+                <div>
+                    <img id="image" src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="" />
+                </div>
+                <div>
+                    <img id="image2" src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="" />
+                    <span class="cat">Categories</span>
+                </div>
+            </div>
+
+            <div id="searchBox">
+                <div id="search"><input type="text" /></div>
+                <div id="belowSearch">
+                    <div>
+                        <a href="brand.html"><p>Exclusive Brands</p></a>
+                    </div>
+                    <div>
+                        <a href="stores.html"><p>Stores</p></a>
+                    </div>
+                    <div>
+                        <a href="deals.html"><p>Deals</p></a>
+                    </div>
+                    <div>
+                        <p>SHOP Travel</p>
+                    </div>
+                    <div>
+                        <p>Departments</p>
+                    </div>
+                    <div>
+                        <p>ShopBuddy</p>
+                    </div>
+                    <div>
+                        <p>SHOP Local</p>
+                    </div>
+                </div>
+            </div>
+            <div id="rightBox">
+                <div>
+                    <img id="rightImg" src=" https://img.shop.com/Image/header2013/motives-usa-can-100110-sculpting-concealer-banners-header1650486339409.svg" alt="img" />
+                </div>
+                <div id="cart">
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="" />
+                        <span>Sign in</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="" />
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="" />
+                        <span>Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- OTP HTML -->
     <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIHBg8IBxMTERUVFxoZExYYFhUXHhcYFhoWGCAbHxcYICgsJBwxHhgfLTElJyorLjM6HiEzRDMvNyotLi0BCgoKDg0OGxAQGzcmHyYtNTUrODIyLysrNy0yLS0wLi8vLS0tNy0tKy0wLTUtLy8tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMIBBAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQcEBggDAQL/xABAEAACAQIEAwUEBwUHBQAAAAAAAQIDEQQFBhIHITETQVFhgSJCUnEUFTJykZKhFiMkYqIIsbLB0dLwNVNjc5P/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBQT/xAAoEQEAAgICAAQFBQAAAAAAAAAAAQIDERIhBBMxQSJRYYHwBUJSkeH/2gAMAwEAAhEDEQA/ALxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8ufQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfG7ALkNnmo6OUR2Te+p3QXX1fcv8AljXM61fUxlX6Hkqkru25K8pfdS6fPr8jUa8ZQrTjVvuTalzu91+fPvdzreF/TZt3lnX09/8AHL8T+ocesf8AfstHS2Nq5lgZY7GWW+b2RXSMY8vXnfmTRFUNuQ6bU67tGhScpv7kXKT/ALykMLxVzjF1Ozwqpzla+2FBzaXyi+nPqeC1PMvaaem3upbhSIt6uhAUDiOJmd4Wn2uJpqnFdXPCzivxdjc+GvEqepsxeU5vThCq4uVOdO6jPb1i4ybadufV3s+ludbYbRG14yRM6WWADJcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIvUmY0ssyeriMfWhh47WlOXc2na0VzlLwiubIbiNrH9j8ohXpQVWrVk4U4t2Ssm3KVubS5cl1uua6nPOfZ7idQ436Xm9V1Je6ukYJ90Yrkl+r72zfFhm3fszyXiOln6S1ZDF6ilh8hpunh6FKpVrVZpOrWUFtivCEd8o+yubsua5oyNPYZ5hntCnPnee6fmo+0/xt+prfD3DfRNK43MJda9WFCH3aSdSTXk3JJ/IsDh1hd+OrYt+5FRXzm7v9I/qdalvLwZMs+s9fn3lyslYvmx449I7/AD7Q9uMuZ/V2ha1KLtKvKNJeak90l+SMvxNF4IYvCZXXxmYZticPQk1CnTVSrTpya5zk0pNezfZz8me3H/M+1zXB5VB8qcJVZrzqPbH1ShL8x4ad4QSzrIMNmc8X2LrU1UUOw37VPnHn2iv7LT6d5zKxWMXxT6ulMzN+vZvusdfZdhcgxEKGIoYqc6cowpU5xq7pSTXtbLpR8W/77Ir7gXkk6+fVM6qK1KhCUVJ99SaSsn5Qvf7yNLxGDp6f1PPA55Dt6dGq41VGUobop/aTjzXs87enmXNxWxkNM6AWXZPGNFVpKjBQW1Rg05zt84xab6+031JmvCOFf3ETynlPshNW8YJxxzwOk4QqJPb20k575dP3dONrrwk+vhazeFl/FPMcqxGzVOHajOMnTcqFSjJSUXtaUrKUd1k/C979zzeAuQwnQxGfV4pzU+xpXX2UoxlKS83vSv5Nd7JHj7iIQ03hsNO2+VdSh4qMITUn/VFepGqRbhpO7ceW344Y67x+rM+nhMwjh1Sp0nObhCcXuvGMVeU31u3090wtT8RM1wWocThcnwsZUac3CEpYbEScttk3ujJJrcnay6WM7gFlnYZDiczmrOtV2xfjCkv98pr0JTiLxGpaYpywOXbauKa+z1jRuvtT8/CPXxsutZiPMmK12mJnjuZaFiOLmbYWfZ4qjhqbte06FaLt42lU6ciw+HerMRnOmsRnmpOxo04SeyUYyhHZCKcptylK63Nrl8LNI0Pw/r6pxv7Q6xlUcJvcoTbU6/g5fDT8ErX7rK15Hjrmf0HLcHp/BpQhO85xiklspWUIWXu7ne38iLWilpilY790RNojlLHzvi/icfjng9IYfcvdlKE6lSaXfGjDovnd+KXQi6fFbNcqxyp51Rg++VKpRnQnbyfVfNxaN54K5FDLtJQzKUV2uJblKXK+xScYRv4WW638xqP9oDEwnnOCwsLb4U5yn42nKKin+SQrwm/CIRblFeW1r4HUVHHaXWoKTtS7KVV3teKgm5J+acWn8ioMs4z4yOJ7TNaeHdNRk3GEJxlJ2e2O9zaS3Wu7PknyvYkcfVlp/gPQwtXlPE+yk/hr1J1mrf8Aqv8AiePAvTdPG1a+eY6Cn2clTobldRnbdKVn32lFJ915EVrStbTPz6TNpmYiGdofXuZal1lRwOIjSpUWpznFU5JqnGLtaUndvc4q/mR1bjDioagqUmsOsLGtJbuznKboxk+j7RLe4rlytd+BaWt8z+pdJ4zMY2UoUpKm/wCefsR/qkileC2n6ecaodfGRU4YaCmovmnUbtC68rSfzSFIpMTaY6J5RMRtJ53xQzdfxdDDfRKDfsOdCpK9+l6s0ot/JL1N24Xa9lqyFXCZlCMK9JKV4XUakG7XUW3Zp2ur25r5KT4p4iGH0DjvpNvahsgn8c5JRt5ptP0uVfwSp/RcxzDPK1+zw+Gkpee5qdr+NqT/ABGq2xzOtJ3MW1tYXELiLS0o1gsLFV8Q0nsvaNOL6ObXf4RXN+XK9fUeJ2dRprMp0IzodW/o1VU3Hyqp8vnd+pC6FwD1pr+M84tUU3OviE72ko2e37u5xVvDkdA6hxFPL9PYrEYpLs4UZ7lZWcVF+zbz6WForj1XW5Imbd7VJX4t47MM/hg8hp4eNOrOnCkqlOcpKU9kXdxmk/bb7ulib4m69x2k9QQwWXRoOnOlGcXUpzk926cZK8Zr4V3d5ofBrK/rDXGHnPmqEJVZfNJQj/VNP0Ns/tB4P/p+PX/kpv12TX+GRaa0jJFdKxa3CZWbpPM5ZzprCZnX2qVWlCU1G6Sk0tySbfK9yu9XcUMTT1Osm0jTpVmpKm3KMp9pVbs4x2yjZJ8m3336JXcDR148n4V4XKsDP+Jn2sHK/OlSVWp7XLpKzSj6vu57DwW0X9Dwy1HmMfbmrYaL9ym/ft8Uu7wX3mU4RTdrfZblM6iFnZbGrHA0/rFwlV2rtHBOMd3ftTbdvmzKAPO1AAAAAFFccq9XH6mo4LD06k40KXNxhJrfVd2uS+GMPxK4+r63/Zrf/Of+h14D0U8RNY1plbFud7U1Qy+eXaby7Ldk7xo9rU5PlUxEnUadu9KyLD0Pg3hchjKas6knJp/lX6L9TYhYvl8XN8MYta72yp4aK5Zy7c2azoV9T8Qq6hTq7aleNCEtkrKMXGipXt9nk5ep0fQoxw9CNGkrRilGK8ElZHoDz3vyiI+T0Vrrbm/ixlNRa8xsqNOco1Nkk4wk1zpQT5peKZYHEDJa+qeHOAxmBhKVWnClVlSt7TUqVpJLvkm7268muvItAFvOnr6I4ev1c3aK1dmGl41Msyqh22+W50p0qspRnZRulBp9Iq6fh3czF1z9ZY/Ou21FCcqvZxeyEJONKMrtQW26vazfNvmrvlZdNWPpfz9W3FVfL61tVufYrEaI4Y4HL8njJV5qMZOMXJwcoyqVJpLv3O138VypMplXy7M1mFTCPEyTcrVqVacXNu++STW6V/Fvm79bHVoK1zcYnr1TbHv3UrlfEzN8wzShglhaMe0qQhu7DELapSScm3Pok7+hL8bNKV83p4fNsrhKq6UZQq04q8trakpRj32d7pc+a8GWmCPM1aJrGk8OtTLnbTvETMsgyuOSYWjCpsuqfaUqrnFNt2tFq6TfJW8iU0xoHG6tzx55q9Tp05SU5qots61rWgoe5TskuaXLkl3q9LCxM5v4xpEY/nKluO9apicwweV4SnOUKcJTkowk1ebUY9F1Sg/zG/cLcqeU6GwdKqnGU4urNNWd6rc0mvFRaXobYCs5N1iq0V72q3j5mnYZDhsri+darukufOFFJ/45w/Ar3S2JzHR+Ep6kyul2lHEKUJXhKcf3c2va22cXdPa725vqZfG3NljtbSwlN3WHpxpqK+OX7x28/aivQvTS2V/U2nMJlj60qUIyfS8klufrK79TblwxxGvVnrlaVE5lj824mYqlh40Xsi7xjCMoUot8t8pybu7ebfWy587eyLRNPJ9FVtP05XlWpzVapa26dSG1yt4JWSXgjbLH0xvkmY1HUL1prty7l88foPUar9lKnWheDjOEpQqKXVJq26LsmnF9yNg1lnecakyCNbNKDoYd1IqNOFOpF1ZJSlucZNycFtvflG7j1fToGx9Lzn3MTrtXy+tbVRwFyeWFwOMzLEwlCU5xpxUouL201ubSfc3P+kkOO1GNTRkKlRpShiKbgrq8m1ODS8fZk3ZfDfuLDr1Y0KMq1ZqMYpuUm7JJc22/A531RnVbiZrGngMou6ae3Dxd7KPvVpru5K/ikkuvWabvk5yW+GvF58LtHftTnPb4yP8ADUWnV8Kkuqpf5y8uXvJnR8Y7Y2RGaayOlp3JqWWYBezBc2+s5PnKb82/9OiJQzy5Jvba1K8YAAZrgAAAAAAAAAAAAAAAAAAAAAAAAAAAADHlgqU5ucqdNt823GN7/OxkAAAAAAAH5nBVIOFRJp9U1dP0POlhKdGW6jCEX0uopcvQ9gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//2Q=="/>
     <div id="cont">
         <div>Enter OTP send to your mobile number</div>
@@ -92,6 +308,11 @@ img{
         </div>
         
       </div>
+      <img style="width: 100%;height: 350px;margin-top: 100px;" src="https://lh3.googleusercontent.com/bLAxjlv7H69fL9jqsxJAPV_GegpE_UBZHGPc5WjIPTfWTFDKu8DLbr1X-g1IUXi8mCQ-KXhqvHfhq8YytdgOLu58ZDdPbvhZYTvfrt8bjMG0k5XpCm-3Uu8V19oFpgr26uzy0IaMhw=w2400" alt="">
+
+      <!-- bottom html -->
+     
+
 </body>
 </html>
 <script>
@@ -105,6 +326,7 @@ function store(){
     if(otp==otp1){
         
         alert("Congrats payment successfull")
+
        
     }
     else{

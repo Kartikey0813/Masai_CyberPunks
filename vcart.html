@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add cart Page </title>
+  <style>
+    table{
+      border: 1px solid red;
+      border-collapse: collapse;
+    width: 81%;
+    margin: auto;
+    text-align: center;
+    }
+    table thead{
+      border: 1px solid red;
+      background: rebeccapurple;
+    color: red;
+    font-size: 20px;
+    font-family: system-ui;
+    }
+    table thead th{
+      border: 1px solid red;
+      background-color: white;
+  color: black;
+  font-family:'Courier New', monospace;;
+    }
+   table tbody  td{
+      padding: 14px;
+      border: 1px solid red;
+    }
+    img{
+      max-width: 40%;
+    max-height: 64px;
+    cursor: pointer;
+    border: 1px solid red;
+
+    }
+    button{
+      font-size: 20px;
+    padding: 1px 11px;
+    cursor: pointer;
+    }
+    span{
+      display: inline-block;
+    margin: 0px 10px;
+    font-size: 25px;
+    }
+    .cuppon,.price{
+      
+      display: flex;
+      justify-content: space-around;
+      width: 40%;
+      margin: auto;
+      margin-top: 50px;
+      align-items: center;
+    }
+    .price{
+      margin-top: 0%;
+      
+    }
+    .cuppon button{
+      padding: 5px 10px;
+      font-weight: 600;
+      text-transform: capitalize;
+
+    }
+    .cuppon input{
+      padding: 8px;
+      font-size: 20px;
+      /* border: none; */
+      
+    }
+    .price h3,.price h4{
+      font-size: 20px;
+      font-family: monospace;
+      border-radius: 30px;
+      color: black;
+    }
+    
+    h1{ width:25%;
+      /* margin: auto; */
+      /* background-color: white; */
+            color:black;
+            padding: 20px;
+            justify-content: flex-start;
+            margin-left: 50px;
+    }
+    #productLength{
+      /* border: 2px solid red; */
+      background-color: black;
+      color: white;
+      padding: 20px;
+    }
+    #vbag{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+      border: 1px solid red;
+      background-color: #f0f1f7;
+    }
+    #vbag>div:first-child{
+      width:30%;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      display: flex;
+      /* border: 2px solid red; */
+      justify-content: space-between;
+    }
+    #vbag>div:first-child>input{
+      width:60%;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      display: flex;
+      /* border: 2px solid red; */
+      justify-content: space-between;
+    }
+    #vbag>div:first-child>button{
+     
+      margin-left: 20px;
+      font-size: 13px;
+      width: 50%;
+      border: 1px solid red;
+      background-color:none;
+      color:#545871;
+      padding: 10px;
+      border-radius: 25px;
+    }
+    #vbag>div:first-child>button:hover{
+      font-size: 13.5px;
+   }
+   #vbag>div:nth-child(2){
+    width: 20%;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-left: 30px;
+      display: flex;
+      /* border: 2px solid red; */
+      background-color: rgb(46, 41, 41);
+      color: white;
+      padding: 10px;
+      justify-content: space-between;
+    }
+    #vbag>div:nth-child(3){
+      width:20%;
+      background-color: rgb(184, 206, 240);
+    /* border: 2px solid red; */
+     
+    padding-top: 20px;
+      /* border: 2px solid red; */
+
+    }
+    #checkout{
+      /* border: 2px solid red; */
+      border: none;
+      background-color: rgb(249, 174, 35);
+      color: white;
+      font-size: 30px;
+      padding: 10px;
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="yourcart">
+  <h1>Your Cart</h1>
+  <a href="underline"><p></p></a>
+</div>
+  <div id="vbag">
+    <div class="cuppon">
+      <input type="text" id="cupCode">
+      <button>Apply Coupon code</button>
+    </div>
+    <div class="price">
+      <h3>Total Price</h3> <h3 id="total">0</h3>
+    </div>
+    <div class="price">
+      <h4>Items in cart</h4> <h4 id="productLength"> 0</h4>
+    </div>
+  </div>
+ 
+  <table border="1px">
+    <thead>
+      <tr>
+        <th>Img</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Delete</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr>
+        <td><img src="https://content.shop4reebok.com/static/Product-EX4296/reebok_EX4296_1.jpg.plp" alt=""></td>
+        <td>Name of ther product</td>
+        <td>34394$</td>
+        <td><button> -</button> <span> 0</span> <button>+</button></td>
+        <td> <img src="https://media.istockphoto.com/vectors/garbage-bin-sign-vector-id1139466631?k=20&m=1139466631&s=612x612&w=0&h=F3hOMYdQTDn4NFEi94i9StIbDxJ1v7mX79lDxz1cXLk=" alt=""></td>
+        <td>10$</td>
+      </tr> -->
+      
+    </tbody>
+  </table>
+  <button id="checkout" onclick="Checkout()">Checkout</button>
+</body>
+
+</html>
+<script>
+    var totalsum =0;
+    var mencart =  JSON.parse(localStorage.getItem("mendetail"))
+    displaycart(mencart)
+    document.getElementById('productLength').innerText=mencart.length;
+    function displaycart(mencart){
+      document.querySelector('tbody').innerHTML='';
+      mencart.forEach(function(elem,index){
+        let tbody=document.querySelector('tbody');
+        let tr=document.createElement('tr');
+        let td=document.createElement('td');
+        let img=document.createElement('img');
+        img.setAttribute('src',elem.image_url);
+        td.append(img);
+        let td1=document.createElement('td');
+        td1.innerText=elem.name;
+        let td2=document.createElement('td');
+        td2.innerText=elem.price;
+        let td3=document.createElement('td');
+        let btn1=document.createElement('button');
+        btn1.innerText='-';
+        let span=document.createElement('span');
+        span.innerText='1';
+        let btn2=document.createElement('button');
+        btn2.innerText='+';
+        td3.append(btn1,span,btn2);
+        let td4=document.createElement('td');
+        let img2=document.createElement('img');
+        img2.setAttribute('src','https://media.istockphoto.com/vectors/garbage-bin-sign-vector-id1139466631?k=20&m=1139466631&s=612x612&w=0&h=F3hOMYdQTDn4NFEi94i9StIbDxJ1v7mX79lDxz1cXLk=')
+        td4.appendChild(img2);
+        img2.addEventListener('click',function(){
+            deleteProduct(elem,index)
+            total();
+        })
+        let td5=document.createElement('td');
+        td5.innerText=elem.price;
+        
+        tr.append(td,td1,td2,td3,td4,td5);
+        tbody.appendChild(tr);
+        btn2.addEventListener('click',function(){
+          let acutal=elem.price;
+          productQuantityPlus(span,td5,acutal) 
+        })
+        btn1.addEventListener('click',function(){
+          let acutal=elem.price;
+          productQuantityMinus(span,td5,acutal)
+        })
+})
+    }
+    // delete Product Page 
+function deleteProduct(elem,index){
+  mencart.splice(index,1);
+  localStorage.setItem('mendetail',JSON.stringify(mencart));
+  displaycart(mencart)
+  document.getElementById('productLength').innerText=mencart.length;
+}
+  // increase Product quantity 
+let dataArray=[];
+let latestArray=[];
+function productQuantityPlus(span,price,acutalPrice){
+  latestArray=dataArray;
+  dataArray=[];
+  let count=+span.innerText;
+  let acutalData=+acutalPrice;
+  count++;
+  span.innerText=count;
+  let prices=count*acutalData;
+  price.innerText=prices;
+  dataArray.push(prices);
+  total();
+}
+
+// decrease product quantity 
+function productQuantityMinus(span,price,acutalPrice){
+  let currentPrice=+price.innerText;
+  let acutalData=+acutalPrice;
+  let count=+span.innerText;
+  if(count==1){
+      count=1;
+      span.innerText=count;
+    }
+    else{
+      count--;
+      span.innerText=count;
+    }
+    if(currentPrice==acutalData){
+      price.innerText=acutalData;
+    }
+    else{
+      price.innerText=currentPrice-acutalData;
+    }
+    total();
+}
+// put the total pize of the product 
+function total(){
+  let totalData=document.querySelectorAll('tbody td:last-child');
+  let totalPrice=0;
+  let priceTag=document.getElementById('total')
+  totalData.forEach(function(elem){
+    let data=+elem.innerText
+    console.log(elem.innerText);
+    totalPrice+=data;
+    priceTag.innerText=totalPrice;
+  })
+}
+
+displaycart(mencart)
+    total();
+    document.querySelector('button').addEventListener('click',applyCupponCode);
+function applyCupponCode(){
+      let input=document.querySelector('input').value;
+        let totals;
+        let totalData=+document.querySelector('#total').innerText;
+        // console.log(totalData)
+        if(input =="masai30"){    
+            totals= (totalData/100)*70;
+            document.querySelector('#total').innerText=totals;
+        }
+
+}
+function Checkout(){
+  window.location.href="addressPage.html"
+}
+</script>
